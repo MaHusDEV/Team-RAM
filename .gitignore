@@ -1,0 +1,9 @@
+node_modules/
+#Rider editor
+*.DotSettings.user
+.idea/
+
+.env
+
+.vscode/
+
