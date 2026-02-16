@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/LoginHandler.css">
+    <link rel="stylesheet" href="/public/css/general.css">
+    <title>Document</title>
+  </head>
+  <body >
+    <div class="container">
+      <header>
+        <div class="header-container">
+          <a href="">Home</a>
+          <a href="">My collections</a>
+          <a href="">Choose yuor mood </a>
+          <a href="">Gues the song</a>
+        </div>
+      </header>
+      <main>
+        <div class="login-container">
+          <h2>Login</h2>
+          <form action="/login" method="post">
+            <div class="form-login">
+                <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Andriy Piharov" required"/>
+            </div>
+            <div  class="form-login">
+              <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="musiclover@gmail.com" required />  
+            </div>
+            <div  class="form-login">
+              <label for="password">My password</label>
+            <input type="password" id="password" name="password" placeholder="My password" required /> 
+            </div>
+            <div class="form-login"><button>Login</button></div>
+          </form>
+        </div>
+      </main>
+      <footer><p>© 2026 MusicMatch – WPL Project</p></footer>
+    </div>
+  </body>
+</html>
