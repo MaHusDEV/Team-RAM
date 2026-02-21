@@ -1,0 +1,64 @@
+.detail-container {
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "recommended";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  min-width: 800px;
+}
+
+.music-logo-container {
+  grid-area: logo;
+  display: flex;
+  align-items: stretch;
+  background-color: rgb(118, 67, 21);
+  min-width: 800px;
+  width: 1fr;
+  margin: 0;
+}
+.image-container img {
+  width: 300px;
+  height: 300px;
+  object-fit: fill;
+  display: block;
+}
+.text-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.text-container > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.text-container h1,
+.text-container h3 {
+  margin: 0;
+}
+.rec-container {
+  grid-area: recommended;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  align-content: start;
+  background-color: var(--color-header);
+  gap: 15px;
+  height: 580px;
+}
+.rec-music {
+  width: 400px;
+  height: 50px;
+  border: 5px solid var(--color-header);
+  border-radius: 20px;
+  background-color: var(--music-cont-color);
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.rec-header {
+  font-size: large;
+  border: 10px;
+  padding: 10px;
+}
