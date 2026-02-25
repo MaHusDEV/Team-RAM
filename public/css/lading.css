@@ -1,0 +1,36 @@
+body{
+    max-height: 100vh;
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.h1-container{
+    padding: 10vh;
+    font-size: 30px;
+    background-color:#F6E3E3 ;
+    justify-items: center;
+}
+
+.project-container{    
+    padding: 14vh;
+    background-color:var(--color-header);
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    
+
+}
+.project-container h2{ 
+    border-radius: 30px;
+    background-color:#D9D9D9;
+    padding: 5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.674);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project-container h2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.793);
+}
