@@ -6,6 +6,7 @@
   --color-text: #000000;
   --hover-text-color: rgb(53, 235, 220);
   --music-cont-color: #d9d9d9;
+  --header-background: #f6e3e3;
 }
 body {
   font-family: Arial, sans-serif;
