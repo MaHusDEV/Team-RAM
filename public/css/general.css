@@ -4,14 +4,18 @@
   --color-button: #add8e6;
   --color-background: #fffafa;
   --color-text: #000000;
-  --hover-text-color: rgb(53, 235, 220);
+  --hover-text-color: rgb(73, 95, 91);
   --music-cont-color: #d9d9d9;
   --header-background: #f6e3e3;
 }
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--color-background);
   color: var(--color-text) !important;
+  background: linear-gradient(
+    135deg,
+    var(--header-background),
+    var(--color-background)
+  );
 }
 
 .container {
@@ -36,7 +40,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  display: flex;
   margin: 0px;
 }
 .header-container,
@@ -91,10 +94,7 @@ a:hover {
   font-size: 14px;
   margin-top: 0px;
 }
-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn {
   background-color: var(--color-button);
   width: 100px;
   padding: 10px;
@@ -102,7 +102,19 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
-s input {
+.play-btn,
+.like-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.play-btn :hover,
+.like-btn :hover {
+  transform: translateY(-2px);
+}
+
+input {
   width: 100%;
   padding: 8px;
   border: 2px;

@@ -11,7 +11,7 @@
   grid-area: logo;
   display: flex;
   align-items: stretch;
-  background: linear-gradient(135deg, rgb(92, 57, 26), rgb(120, 75, 40));
+  background: linear-gradient(135deg, rgb(92, 57, 26), rgb(142, 90, 50));
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   min-width: 800px;
   width: 1fr;
@@ -44,23 +44,40 @@
   width: 100%;
   margin-right: 10px;
 }
+.logo-play-img {
+  width: 100px;
+  height: 100px;
+}
 .logo-like-img {
   width: 50px;
   height: 50px;
+  margin-right: 5px;
 }
-.logo-like-img:hover {
-  transform: translateY(-2px);
-}
-
 .discription-container {
-  width: 300px;
-  margin-right: 10px;
+  width: 350px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  margin-top: 25px;
 }
 .discription-container div:last-child {
   margin-top: auto;
   align-self: flex-end;
+}
+.artist-description p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.75);
+  margin: 0;
+}
+.artist-description strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+.dis-like-cont {
+  display: flex;
+  margin-right: 30px;
+  padding: 10px;
 }
 .rec-header {
   font-size: large;
@@ -104,9 +121,6 @@
 .rec-like {
   width: 25px;
   height: 25px;
-}
-.rec-like:hover {
-  transform: translateY(-2px);
 }
 .rec-profile-img {
   width: 100px;

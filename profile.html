@@ -4,23 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/css/general.css" />
+    <link rel="stylesheet" href="public/css/profile.css" />
     <title>Document</title>
   </head>
   <body class="container">
     <header class="header-container">
       <div>
-        <a href="home.html">Home</a>
-        <a href="">My collections</a>
-        <a href="">Choose your mood </a>
-        <a href="">Guess the song</a>
-        <a href="">Compare songs</a>
+        <a href="home.html">Startpagina</a>
+        <a href="collection.html">Mijn collecties</a>
+        <a href="">Kies je stemming</a>
+        <a href="">Raad het lied</a>
+        <a href="compare.html">Liedjes vergelijken</a>
       </div>
       <div>
-        <a href=""><img src="public/assets/user.png" alt="Profile Photo" /></a>
+        <button class="btn"><a href="login.html">Inloggen</a></button>
+        <button class="btn"><a href="register.html">Registreren</a></button>
+
+        <a href="profile.html">
+          <img src="/public/assets/user.png" alt="Profiel" />
+        </a>
       </div>
     </header>
     <main class="main-container">
-      <div class="profile-container main-gradiend-container"></div>
+      <div class="profile-container main-gradiend-container">
+        <div class="profile-card">
+          <div class="profile-header">
+            <img
+              src="/public/assets/Palindrom_profile.jpg"
+              class="profile-avatar"
+            />
+            <h2>Palindrom</h2>
+            <p>palindrom@gmail.com</p>
+          </div>
+
+          <div class="profile-info">
+            <div class="profile-stat">
+              <span>12</span>
+              <p>Favoriete liedjes</p>
+            </div>
+
+            <div class="profile-stat">
+              <span>4</span>
+              <p>Collecties</p>
+            </div>
+          </div>
+
+          <div class="profile-actions">
+            <a href="/logout" class="logout-btn">Uitloggen</a>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer-container">
       <p>© 2026 MusicMatch - WPL Project</p>

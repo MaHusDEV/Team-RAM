@@ -1,2 +1,40 @@
 .profile-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card {
+  width: 400px;
+  border-radius: 25px;
+  padding: 40px;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.profile-stat span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: var(--color-button);
+  text-decoration: none;
 }

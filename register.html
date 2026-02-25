@@ -1,45 +1,76 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/css/LoginHandler.css">
-    <link rel="stylesheet" href="/public/css/general.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/general.css" />
+    <link rel="stylesheet" href="/public/css/LoginHandler.css" />
+    <title>Registreren - MusicMatch</title>
   </head>
+
   <body class="container">
-      <header class="header-container">
-        <div>
-          <a href="home.html">Home</a>
-          <a href="">My collections</a>
-          <a href="">Choose your mood </a>
-          <a href="">Guess the song</a>
-          <a href="">Compare songs</a>
-        </div>
-        <div>
-            <a href="login.html"><img src="public/assets/user.png" alt="Profile Photo"></a>
-        </div>
-      </header>
-      <main class="main-container">
-        <div class="login-container main-gradiend-container">
-          <h2>Register</h2>
-          <form action="/register" method="post">
-            <div class="form-login">
-                <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Andriy Piharov" required"/>
-            </div>
-            <div  class="form-login">
-              <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="musiclover@gmail.com" required />  
-            </div>
-            <div  class="form-login">
-              <label for="password">My password</label>
-            <input type="password" id="password" name="password" placeholder="My password" required /> 
-            </div>
-            <div class="form-login"><button>Register</button></div>
-          </form>
-        </div>
-      </main>
-      <footer class="footer-container"><p>© 2026 MusicMatch - WPL Project</p></footer>
+    <header class="header-container">
+      <div>
+        <a href="home.html">Startpagina</a>
+        <a href="collection.html">Mijn collecties</a>
+        <a href="">Kies je stemming</a>
+        <a href="">Raad het lied</a>
+        <a href="compare.html">Liedjes vergelijken</a>
+      </div>
+      <div>
+        <button class="btn"><a href="login.html">Inloggen</a></button>
+        <button class="btn"><a href="register.html">Registreren</a></button>
+
+        <a href="profile.html">
+          <img src="/public/assets/user.png" alt="Profiel" />
+        </a>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <div class="login-container main-gradiend-container">
+        <h2>Registreren</h2>
+
+        <form action="/register" method="post">
+          <div class="form-login">
+            <label for="name">Naam</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Andriy Piharov"
+              required
+            />
+          </div>
+          <div class="form-login">
+            <label for="email">E-mailadres</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="musiclover@gmail.com"
+              required
+            />
+          </div>
+          <div class="form-login">
+            <label for="password">Wachtwoord</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Voer je wachtwoord in"
+              required
+            />
+          </div>
+          <div class="form-login">
+            <button class="btn" type="submit">Registreren</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer-container">
+      <p>© 2026 MusicMatch - WPL Project</p>
+    </footer>
   </body>
 </html>
