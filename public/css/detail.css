@@ -51,6 +51,17 @@
 .logo-like-img:hover {
   transform: translateY(-2px);
 }
+
+.discription-container {
+  width: 300px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.discription-container div:last-child {
+  margin-top: auto;
+  align-self: flex-end;
+}
 .rec-header {
   font-size: large;
   align-items: center;

@@ -1,9 +1,23 @@
+# Node
 node_modules/
-#Rider editor
-*.DotSettings.user
-.idea/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
+# Environment variables
 .env
+.env.*
 
+# JetBrains
+.idea/
+*.iml
+
+# Rider
+*.DotSettings.user
+
+# VS Code
 .vscode/
 
+# OS files
+.DS_Store
+Thumbs.db
