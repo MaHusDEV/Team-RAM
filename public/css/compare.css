@@ -1,0 +1,68 @@
+body{
+    max-height: 100vh;
+
+}
+.main-container{
+    padding: 5rem;
+}
+.h1-container{
+    padding: 10vh;
+    font-size: 30px;
+    background-color:#F6E3E3 ;
+    justify-items: center;
+}
+.song-card-container{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    gap: 5rem;
+    margin: auto;
+}   
+.song-card{
+    height: 10rem;
+    width: 8rem;
+    background-color: #f6E3E3;
+}
+.skills-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.song-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: auto;
+}
+
+.VS{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.skills-card{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: repeat(3, auto);
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+.skills-card > .skills-card:nth-of-type(1){grid-column:1;grid-row:1;}
+.skills-card > .skills-card:nth-of-type(2){grid-column:1;grid-row:2;}
+.skills-card > .skills-card:nth-of-type(3){grid-column:1;grid-row:3;}
+.skills-card > .skills-card:nth-of-type(4){grid-column:3;grid-row:1;}
+.skills-card > .skills-card:nth-of-type(5){grid-column:3;grid-row:2;}
+.skills-card > .skills-card:nth-of-type(6){grid-column:3;grid-row:3;}
+
+.compare-text{
+    grid-column: 2;
+    grid-row: 2;
+    background-color: #d98c8c;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
