@@ -1,40 +1,63 @@
 .profile-container {
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-  border-radius: 25px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
-
-.profile-card {
-  width: 400px;
-  border-radius: 25px;
-  padding: 40px;
-  text-align: center;
+.profile-header {
+  width: 100%;
+  overflow: hidden;
+  position: relative; /* container for absolutely positioned children */
 }
-
-.profile-avatar {
-  width: 120px;
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border: 5px solid var(--color-header);
   border-radius: 50%;
-  margin-bottom: 20px;
+  object-fit: cover;
 }
 
-.profile-info {
+.place-content-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.edit-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.edit-button:hover {
+  transform: translateY(-2px);
+}
+.edit-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+.profile-background-photo {
+  background-image: url("/public/assets/profile-background-photo.avif");
+  width: 100%;
+  height: 240px;
+}
+.info-container {
   display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  gap: 20px;
 }
-
-.profile-stat span {
-  font-size: 22px;
-  font-weight: bold;
+.info-container p {
+  align-self: center;
 }
-
-.logout-btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 10px 20px;
-  border-radius: 15px;
-  background: var(--color-button);
-  text-decoration: none;
+.follow-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
 }

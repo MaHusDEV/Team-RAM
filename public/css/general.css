@@ -8,6 +8,9 @@
   --music-cont-color: #d9d9d9;
   --header-background: #f6e3e3;
 }
+* {
+  margin: 0;
+}
 body {
   font-family: Arial, sans-serif;
   color: var(--color-text) !important;
@@ -27,7 +30,6 @@ body {
     "main"
     "footer";
   min-height: 100vh;
-  height: 100%;
   width: 100%;
   margin: 0px;
 }
@@ -72,9 +74,6 @@ a:hover {
 }
 .main-container {
   grid-area: main;
-  display: grid;
-  place-items: center;
-  margin: 0px;
 }
 .main-gradiend-container {
   background: linear-gradient(
