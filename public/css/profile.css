@@ -4,7 +4,7 @@
 .profile-header {
   width: 100%;
   overflow: hidden;
-  position: relative; /* container for absolutely positioned children */
+  position: relative;
 }
 .profile-img {
   width: 200px;
@@ -60,4 +60,25 @@
   flex-direction: row;
   gap: 10px;
   align-items: center;
+}
+.play-list-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.play-list-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 250px;
+  border: 5px solid var(--music-cont-color);
+  background-color: var(--music-cont-color);
+  border-radius: 5px;
+}
+.play-list-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
