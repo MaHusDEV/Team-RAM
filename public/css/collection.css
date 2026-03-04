@@ -11,15 +11,16 @@
   grid-area: logo;
   display: flex;
   align-items: stretch;
-  background: linear-gradient(135deg, rgb(92, 57, 26), rgb(120, 75, 40));
+  background-color: var(--header-background);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   min-width: 800px;
   width: 1fr;
 }
 
 .image-container img {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
   object-fit: fill;
   display: block;
 }
