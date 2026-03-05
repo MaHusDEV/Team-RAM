@@ -42,11 +42,9 @@ body {
   background-color: var(--color-header);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   width: 100%;
-  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px;
 }
 .header-container,
 .footer-container {
@@ -126,7 +124,23 @@ input {
   border-radius: 5px;
 }
 .profile-img {
+  min-width: 100px;
   width: 100px;
   border: 5px;
   border-radius: 20px;
+}
+@media (max-width: 768px) {
+  .app-container {
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .header-container {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .footer-container {
+    height: auto;
+    padding: 10px;
+  }
 }

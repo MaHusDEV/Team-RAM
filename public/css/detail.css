@@ -5,7 +5,6 @@
     "recommended";
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
-  min-width: 800px;
 }
 /*
 .music-logo-container {
@@ -34,12 +33,6 @@
   margin-left: 30px;
   margin-bottom: 10px;
 }
-.text-container h1,
-.text-container h3,
-.text-container h4 {
-  margin: 0px;
-  padding: 0px;
-}
 .logo-like-space {
   display: flex;
   justify-content: space-between;
@@ -47,24 +40,12 @@
   width: 100%;
   margin-right: 10px;
 }
-.logo-play-img {
-  width: 50px;
-  height: 50px;
-}
-.logo-like-img {
-  width: 50px;
-  height: 50px;
-  margin-right: 5px;
-}
 .discription-container {
   width: 350px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: 25px;
-}
-.discription-container div:last-child {
-  align-self: flex-end;
 }
 .artist-description p {
   font-size: 20px;
