@@ -34,7 +34,7 @@ body {
     "main"
     "footer";
   min-height: 100vh;
-  width: 100%;
+  min-width: 100%;
   margin: 0px;
 }
 .header-container {
@@ -62,10 +62,6 @@ body {
 }
 .header-container a:hover {
   transform: translateY(-2px);
-}
-.header-container a img {
-  height: 25px;
-  width: 25px;
 }
 a {
   text-decoration: none;
@@ -129,6 +125,11 @@ input {
   border: 5px;
   border-radius: 20px;
 }
+@media (max-width: 1670px) {
+  .footer-container {
+    margin-top: 20px;
+  }
+}
 @media (max-width: 768px) {
   .app-container {
     grid-template-rows: auto 1fr auto;
@@ -140,7 +141,6 @@ input {
   }
 
   .footer-container {
-    height: auto;
-    padding: 10px;
+    margin-top: 20px;
   }
 }
