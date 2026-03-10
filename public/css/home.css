@@ -1,0 +1,86 @@
+.logo {
+  background-image: url(../assets/home-logo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.play-list-card {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  border: 5px solid var(--music-cont-color);
+  background-color: var(--music-cont-color);
+  border-radius: 5px;
+}
+.rec-music {
+  display: flex;
+  align-items: flex-end;
+  min-width: 150px;
+}
+.genre {
+  border: 5px solid var(--music-cont-color);
+  border-radius: 10px;
+  background-color: var(--music-cont-color);
+  min-width: max-content;
+}
+.gradient-start {
+  background: linear-gradient(
+    135deg,
+    var(--color-header),
+    var(--color-header-end)
+  );
+}
+.gradient-end {
+  background: linear-gradient(
+    135deg,
+    var(--color-header),
+    var(--color-header-end)
+  );
+}
+.trend-con {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 1fr;
+  align-content: start;
+  gap: 15px;
+}
+.album-con {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+@media (max-width: 1660px) {
+  .trend-con {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 1384px) {
+  .trend-con {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 1100px) {
+  .trend-con {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .trend-con {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .gradient-start {
+    background: linear-gradient(135deg, var(--color-header) 0%, #7d92a7 50%);
+  }
+
+  .gradient-end {
+    background: linear-gradient(
+      135deg,
+      #7d92a7 50%,
+      var(--color-header-end) 100%
+    );
+  }
+}
