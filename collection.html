@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/public/css/output.css" />
     <title>Document</title>
   </head>
-  <body class="app-container">
+  <body class="app-container flex flex-col min-h-screen">
     <header class="header-container">
       <div>
         <a href="home.html">
@@ -113,7 +113,7 @@
         </a>
       </div>
     </header>
-    <main>
+    <!-- <main>
       <div class="music-logo-container">
         <h1>Bibliotheek</h1>
         <div class="header-search">
@@ -474,7 +474,124 @@
           </div>
         </aside>
       </div>
+    </main> -->
+
+    <main class="flex-grow bg-[#6f8396]">
+      <!-- titel -->
+      <section class="bg-[#e6d6d6] py-10 text-center">
+        <h1 class="text-4xl">Bibliotheek</h1>
+      </section>
+
+      <!-- container -->
+      <div class="flex justify-center py-16">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+          <div
+            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+          >
+            <img
+              src="public/assets/chillvibes.jpg"
+              class="w-full h-36 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="font-semibold">Chill Vibes</h2>
+              <p class="text-sm text-gray-600">Mood playlist</p>
+            </div>
+          </div>
+
+          <div
+            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+          >
+            <img
+              src="public/assets/chillvibes.jpg"
+              class="w-full h-36 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="font-semibold">Workout</h2>
+              <p class="text-sm text-gray-600">High energy</p>
+            </div>
+          </div>
+
+          <div
+            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+          >
+            <img
+              src="public/assets/chillvibes.jpg"
+              class="w-full h-36 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="font-semibold">Focus</h2>
+              <p class="text-sm text-gray-600">Study music</p>
+            </div>
+          </div>
+
+          <div
+            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+          >
+            <img
+              src="public/assets/chillvibes.jpg"
+              class="w-full h-36 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="font-semibold">Road Trip</h2>
+              <p class="text-sm text-gray-600">Car playlist</p>
+            </div>
+          </div>
+
+          <div
+            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+          >
+            <img
+              src="public/assets/chillvibes.jpg"
+              class="w-full h-36 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="font-semibold">Happy Hits</h2>
+              <p class="text-sm text-gray-600">Feel good</p>
+            </div>
+          </div>
+
+          <div
+            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+          >
+            <img
+              src="public/assets/chillvibes.jpg"
+              class="w-full h-36 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="font-semibold">Sad Songs</h2>
+              <p class="text-sm text-gray-600">Emotional</p>
+            </div>
+          </div>
+
+          <div
+            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+          >
+            <img
+              src="public/assets/chillvibes.jpg"
+              class="w-full h-36 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="font-semibold">Indie Mix</h2>
+              <p class="text-sm text-gray-600">Alternative</p>
+            </div>
+          </div>
+
+          <div
+            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+          >
+            <img
+              src="public/assets/chillvibes.jpg"
+              class="w-full h-36 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="font-semibold">Late Night</h2>
+              <p class="text-sm text-gray-600">Night vibes</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+
     <footer class="footer-container">
       <p>© 2026 MusicMatch - WPL Project</p>
     </footer>

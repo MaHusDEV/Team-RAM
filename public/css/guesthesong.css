@@ -1,0 +1,57 @@
+.mood-title {
+  background-color: var(--color-background);
+  padding: 40px 0;
+  text-align: center;
+}
+.header-container {
+  background-color: var(--music-cont-color);
+}
+
+.mood-title h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.section {
+  background-color: #6f8396;
+  padding: 80px 0;
+}
+
+.moods {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.mood {
+  text-align: center;
+}
+
+.mood {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.mood:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+.mood p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: black;
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  background-color: var(--music-cont-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+}
