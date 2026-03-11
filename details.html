@@ -10,7 +10,7 @@
   </head>
   <body class="app-container">
     <header class="header-container">
-      <div class="flex items-center">
+      <div class="flex items-center gap-5">
         <a href="home.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@
             />
           </svg>
         </a>
-        <a href="">
+        <a href="geusthesong.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -92,7 +92,7 @@
           </svg>
         </a>
       </div>
-      <div class="flex">
+      <div class="flex items-center gap-5">
         <a href="login.html"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +157,7 @@
               class="w-[100%] h-auto md:w-[300px] md:h-[250px]"
             />
           </aside>
-          <div class="text-container text">
+          <div class="text-container text p-2.5">
             <!--Image -->
             <div>
               <img
@@ -169,7 +169,7 @@
             <!--Artist Name -->
             <div class="logo-like-space">
               <div>
-                <p class="text-5xl">Saoedade</p>
+                <p class="text-3xl font-semibold">Saoedade</p>
                 <p>Palindrom</p>
               </div>
               <!--Like -->
@@ -177,7 +177,7 @@
           </div>
 
           <div class="discription-container">
-            <div class="artist-description">
+            <div class="artist-description p-2.5">
               <p>
                 <em>
                   Stepan Burban is een Oekraïense rapper, zanger, componist,
@@ -189,8 +189,8 @@
             </div>
           </div>
         </div>
-        <div class="main-gradient-container flex flex-row gap-[10px]">
-          <button class="play-btn">
+        <div class="main-gradient-container flex flex-row gap-[10px] p-2.5">
+          <button>
             <img
               src="/public/assets/playButton.png"
               alt="Play button"
@@ -225,6 +225,22 @@
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
+              />
+            </svg>
+          </button>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-12 h-12 play-btn"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
                 d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
               />
             </svg>
@@ -233,7 +249,7 @@
         <!--Recommended -->
         <div class="recommended-section">
           <div class="rec-header">
-            <p>Meer van deze auteur</p>
+            <p class="font-semibold">Meer van deze auteur</p>
             <img
               src="public/assets/arrow-down.png"
               alt="arrow-down"
@@ -242,7 +258,7 @@
           </div>
 
           <div class="rec-container main-gradient-container">
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -252,22 +268,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -277,22 +305,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -302,22 +342,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -327,22 +379,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -352,22 +416,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -377,22 +453,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -402,22 +490,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -427,22 +527,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -452,22 +564,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -477,22 +601,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -502,22 +638,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -527,24 +675,36 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
           </div>
           <div class="rec-header">
-            <p>Ontdek nieuwe muziek</p>
+            <p class="font-semibold">Ontdek nieuwe muziek</p>
             <img
               src="public/assets/arrow-down.png"
               alt="arrow-down"
@@ -553,7 +713,7 @@
           </div>
 
           <div class="rec-container main-gradient-container">
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -563,22 +723,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -588,22 +760,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -613,22 +797,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -638,22 +834,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -663,22 +871,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -688,22 +908,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -713,22 +945,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -738,22 +982,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -763,22 +1019,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -788,22 +1056,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -813,22 +1093,34 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
             </aside>
-            <aside class="rec-music text-container">
+            <aside class="rec-music text-container w-full">
               <div>
                 <img
                   src="/public/assets/Palindrom_profile.jpg"
@@ -838,17 +1130,29 @@
               </div>
               <div class="flex flex-row justify-between w-full">
                 <div>
-                  <p>Saoedade</p>
-                  <p>Palindrom</p>
+                  <h2 class="font-semibold">
+                    <a href="details.html">Saoedade</a>
+                  </h2>
+                  <p class="text-sm text-gray-600">
+                    <a href="details.html">Palindrom</a>
+                  </p>
                 </div>
                 <div class="flex flex-row justify-center items-center">
-                  <button class="like-btn">
-                    <img
-                      src="/public/assets/like.png"
-                      alt="Like"
-                      class="rec-like"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="rec-like play-btn"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z"
                     />
-                  </button>
+                  </svg>
+
                   <span>50</span>
                 </div>
               </div>
