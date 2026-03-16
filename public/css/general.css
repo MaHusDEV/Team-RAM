@@ -18,11 +18,7 @@ body {
 body {
   font-family: Arial, sans-serif;
   color: var(--color-text) !important;
-  background: linear-gradient(
-    135deg,
-    var(--header-background),
-    var(--color-background)
-  );
+  background: linear-gradient(135deg, #b6cce4, #a8c0da);
 }
 
 .app-container {
