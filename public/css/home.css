@@ -45,13 +45,6 @@
   align-content: start;
   gap: 15px;
 }
-.album-con {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 224px);
-  justify-content: space-between;
-  padding: 20px;
-  gap: 10px;
-}
 main {
   margin-bottom: 20px;
 }

@@ -2,11 +2,11 @@
   --color-header: #6d8196;
   --color-header-end: #8fa4b9;
   --color-button: #add8e6;
-  --color-background: #f4e5e5;
+  --color-background: #efe3e3;
   --header-background: #f6e3e3;
   --color-text: #000000;
   --hover-text-color: rgb(73, 95, 91);
-  --music-cont-color: #d9d9d9;
+  --music-cont-color: #ffffff;
 }
 * {
   margin: 0;
@@ -56,6 +56,10 @@ body {
     var(--color-header-end)
   );
 }
+.hed-icon {
+  width: 30px;
+  height: 30px;
+}
 .header-container a {
   display: inline-block;
   transition: transform 0.2s ease;
@@ -89,7 +93,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 0px;
 }
 .btn {
@@ -167,21 +171,13 @@ input {
   gap: 5px;
   margin-bottom: 10px;
 }
-.play-list-card {
-  display: flex;
-  flex-direction: column;
-  min-width: 100px;
-  min-height: 150px;
-  border: 5px solid var(--music-cont-color);
-  background-color: var(--music-cont-color);
-  border-radius: 5px;
-}
-.play-list-img {
-  min-width: 100px;
-  min-height: 150px;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+
+.album-con {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 224px);
+  justify-content: space-between;
+  padding: 20px;
+  gap: 10px;
 }
 @media (max-width: 1670px) {
   .footer-container {
