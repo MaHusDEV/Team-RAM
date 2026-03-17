@@ -10,7 +10,7 @@
   </head>
   <body class="app-container flex flex-col min-h-screen">
     <header class="header-container">
-      <div>
+      <div class="flex items-center gap-5">
         <a href="home.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="hed-icon"
           >
             <path
               stroke-linecap="round"
@@ -34,7 +34,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="hed-icon"
           >
             <path
               stroke-linecap="round"
@@ -50,7 +50,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="hed-icon"
           >
             <path
               stroke-linecap="round"
@@ -59,14 +59,14 @@
             />
           </svg>
         </a>
-        <a href="">
+        <a href="geusthesong.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="hed-icon"
           >
             <path
               stroke-linecap="round"
@@ -82,7 +82,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="hed-icon"
           >
             <path
               stroke-linecap="round"
@@ -92,9 +92,47 @@
           </svg>
         </a>
       </div>
-      <div>
-        <a href="login.html" class="btn">Inloggen</a>
-        <a href="register.html" class="btn">Registreren</a>
+      <div class="flex items-center gap-5">
+        <div>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search music..."
+            class="search-input"
+          />
+        </div>
+        <a href="login.html"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hed-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25"
+            />
+          </svg>
+        </a>
+        <a href="register.html"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hed-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"
+            />
+          </svg>
+        </a>
         <a href="profile.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +140,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="hed-icon"
           >
             <path
               stroke-linecap="round"
@@ -113,378 +151,16 @@
         </a>
       </div>
     </header>
-    <!-- <main>
-      <div class="music-logo-container">
-        <h1>Bibliotheek</h1>
-        <div class="header-search">
-          <img src="/public/assets/search.png" alt="search" />
-        </div>
-      </div>
-      <div class="rec-container main-gradient-container">
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-[50px]"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-        <aside class="rec-music text-container">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1>Afspeellijst</h1>
-            <h3>Mood</h3>
-          </div>
-        </aside>
-      </div>
-    </main> -->
 
-    <main class="flex-grow bg-[#6f8396]">
+    <main class="flex-grow">
       <!-- titel -->
-      <section class="bg-[#e6d6d6] py-10 text-center">
-        <h1 class="text-4xl">Bibliotheek</h1>
-      </section>
+      <div class="logo flex flex-row justify-center items-center h-[250px]">
+        <p class="text-6xl font-semibold">Bibliotheek</p>
+      </div>
 
       <!-- container -->
-      <div class="flex justify-center py-16">
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+      <div class="">
+        <div class="main-gradient-container album-con">
           <div
             class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
           >
@@ -493,11 +169,10 @@
               class="w-full h-36 object-cover"
             />
             <div class="p-4">
-              <h2 class="font-semibold">Chill Vibes</h2>
-              <p class="text-sm text-gray-600">Mood playlist</p>
+              <h2 class="font-semibold text-2xl">Late Night</h2>
+              <p class="text-sm text-2xl">Night vibes</p>
             </div>
           </div>
-
           <div
             class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
           >
@@ -506,11 +181,10 @@
               class="w-full h-36 object-cover"
             />
             <div class="p-4">
-              <h2 class="font-semibold">Workout</h2>
-              <p class="text-sm text-gray-600">High energy</p>
+              <h2 class="font-semibold text-2xl">Late Night</h2>
+              <p class="text-sm text-2xl">Night vibes</p>
             </div>
           </div>
-
           <div
             class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
           >
@@ -519,11 +193,10 @@
               class="w-full h-36 object-cover"
             />
             <div class="p-4">
-              <h2 class="font-semibold">Focus</h2>
-              <p class="text-sm text-gray-600">Study music</p>
+              <h2 class="font-semibold text-2xl">Late Night</h2>
+              <p class="text-sm text-2xl">Night vibes</p>
             </div>
           </div>
-
           <div
             class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
           >
@@ -532,11 +205,10 @@
               class="w-full h-36 object-cover"
             />
             <div class="p-4">
-              <h2 class="font-semibold">Road Trip</h2>
-              <p class="text-sm text-gray-600">Car playlist</p>
+              <h2 class="font-semibold text-2xl">Late Night</h2>
+              <p class="text-sm text-2xl">Night vibes</p>
             </div>
           </div>
-
           <div
             class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
           >
@@ -545,11 +217,10 @@
               class="w-full h-36 object-cover"
             />
             <div class="p-4">
-              <h2 class="font-semibold">Happy Hits</h2>
-              <p class="text-sm text-gray-600">Feel good</p>
+              <h2 class="font-semibold text-2xl">Late Night</h2>
+              <p class="text-sm text-2xl">Night vibes</p>
             </div>
           </div>
-
           <div
             class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
           >
@@ -558,11 +229,10 @@
               class="w-full h-36 object-cover"
             />
             <div class="p-4">
-              <h2 class="font-semibold">Sad Songs</h2>
-              <p class="text-sm text-gray-600">Emotional</p>
+              <h2 class="font-semibold text-2xl">Late Night</h2>
+              <p class="text-sm text-2xl">Night vibes</p>
             </div>
           </div>
-
           <div
             class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
           >
@@ -571,21 +241,8 @@
               class="w-full h-36 object-cover"
             />
             <div class="p-4">
-              <h2 class="font-semibold">Indie Mix</h2>
-              <p class="text-sm text-gray-600">Alternative</p>
-            </div>
-          </div>
-
-          <div
-            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
-          >
-            <img
-              src="public/assets/chillvibes.jpg"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-4">
-              <h2 class="font-semibold">Late Night</h2>
-              <p class="text-sm text-gray-600">Night vibes</p>
+              <h2 class="font-semibold text-2xl">Late Night</h2>
+              <p class="text-sm text-2xl">Night vibes</p>
             </div>
           </div>
         </div>

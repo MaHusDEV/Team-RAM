@@ -11,7 +11,7 @@
   </head>
   <body class="app-container">
     <header class="header-container">
-      <div>
+      <div class="flex items-center gap-5">
         <a href="home.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="hed-icon"
           >
             <path
               stroke-linecap="round"
@@ -35,7 +35,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="hed-icon"
           >
             <path
               stroke-linecap="round"
@@ -51,7 +51,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="hed-icon"
           >
             <path
               stroke-linecap="round"
@@ -67,7 +67,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="hed-icon"
           >
             <path
               stroke-linecap="round"
@@ -83,7 +83,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="hed-icon"
           >
             <path
               stroke-linecap="round"
@@ -93,9 +93,47 @@
           </svg>
         </a>
       </div>
-      <div>
-        <a href="login.html" class="btn">Inloggen</a>
-        <a href="register.html" class="btn">Registreren</a>
+      <div class="flex items-center gap-5">
+        <div>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search music..."
+            class="search-input"
+          />
+        </div>
+        <a href="login.html"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hed-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25"
+            />
+          </svg>
+        </a>
+        <a href="register.html"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="hed-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"
+            />
+          </svg>
+        </a>
         <a href="profile.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +141,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            class="hed-icon"
           >
             <path
               stroke-linecap="round"
@@ -115,13 +153,13 @@
       </div>
     </header>
     <main>
-      <section class="mood-title">
-        <h1>Guess the song</h1>
-      </section>
+      <div class="logo flex flex-row justify-center items-center h-[250px]">
+        <p class="text-6xl font-semibold">Raad het liedje</p>
+      </div>
 
       <section class="section flex justify-center py-24">
         <div
-          class="bg-white rounded-2xl shadow-lg w-full max-w-2xl p-16 space-y-12"
+          class="main-gradient-container rounded-2xl shadow-lg w-full max-w-2xl p-16 space-y-12"
         >
           <!-- muziekplaat -->
           <div class="flex justify-center mb-16">
@@ -150,14 +188,16 @@
             </div>
           </div>
 
-          <p class="text-center text-gray-500 mb-12">
+          <p class="text-center mb-12 p-4 text-2xl font-semibold">
             Luister naar het fragment en raad het liedje
           </p>
 
           <!-- input velden -->
           <div class="grid md:grid-cols-2 gap-12 mb-16">
             <div class="bg-gray-50 p-4 rounded-lg">
-              <label class="block text-sm text-gray-600 mb-2"> Artist </label>
+              <label class="block text-sm mb-2 text-2xl font-semibold">
+                Artist
+              </label>
 
               <input
                 type="text"
@@ -167,7 +207,9 @@
             </div>
 
             <div class="bg-gray-50 p-4 rounded-lg">
-              <label class="block text-sm text-gray-600 mb-2"> Song </label>
+              <label class="block text-sm mb-2 text-2xl font-semibold">
+                Song
+              </label>
 
               <input
                 type="text"
@@ -178,7 +220,7 @@
           </div>
 
           <!-- knop -->
-          <div class="flex justify-center">
+          <div class="flex justify-center p-5">
             <button
               class="bg-blue-500 text-white px-10 py-3 rounded-full hover:bg-blue-600 transition shadow"
             >
