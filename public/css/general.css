@@ -71,8 +71,7 @@ a:hover {
   color: var(--hover-text-color);
 }
 .search-input {
-  width: 300px;
-  padding: 8px 15px;
+  min-width: 50px;
   border-radius: 20px;
   border: none;
   outline: none;
