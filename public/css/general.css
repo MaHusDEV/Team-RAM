@@ -70,6 +70,16 @@ a {
 a:hover {
   color: var(--hover-text-color);
 }
+.search-input {
+  width: 300px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #6d8196;
+  transition: 0.2s;
+}
 
 .main-container {
   grid-area: main;
