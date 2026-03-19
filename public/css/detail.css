@@ -6,7 +6,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
 }
-
 .music-logo-container {
   background: linear-gradient(135deg, rgb(92, 57, 26), rgb(142, 90, 50));
 }
@@ -39,7 +38,6 @@
   font-weight: 600;
   color: var(--color-text);
 }
-
 .rec-header {
   display: flex;
   flex-direction: row;

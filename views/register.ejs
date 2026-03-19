@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/output.css" />
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/LoginHandler.css" />
+    <title>Registreren</title>
+  </head>
+
+  <body class="app-container">
+    <%- include("partials/header")%>
+    <main class="main-container flex flex-col items-center">
+      <div
+        class="login-container main-gradient-container w-[400px] h-[340px] p-6 rounded-xl shadow-xl backdrop-blur-sm"
+      >
+        <h2 class="flex justify-center items-center text-2xl">
+          Maak een account aan
+        </h2>
+
+        <form
+          action="/register"
+          method="post"
+          class="flex flex-col h-full gap-4 mt-4"
+        >
+          <div>
+            <label for="name">Naam</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Andriy Piharov"
+              required
+              class="w-full p-2 rounded-md focus:outline-none focus:ring-2"
+            />
+          </div>
+          <div>
+            <label for="email">E-mailadres</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="musiclover@gmail.com"
+              required
+              class="w-full p-2 rounded-md focus:outline-none focus:ring-2"
+            />
+          </div>
+          <div>
+            <label for="password">Wachtwoord</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Voer je wachtwoord in"
+              required
+              class="w-full p-2 rounded-md focus:outline-none focus:ring-2"
+            />
+          </div>
+          <div class="flex justify-center">
+            <button class="btn mt-2 px-4 py-2" type="submit">
+              Registreren
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <%- include("partials/footer")%>
+  </body>
+</html>

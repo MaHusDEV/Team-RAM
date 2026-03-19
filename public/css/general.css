@@ -146,6 +146,7 @@ input {
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  min-width: 0;
 }
 .rec-music:hover {
   transform: translateY(-2px);
@@ -161,8 +162,10 @@ input {
   min-width: 20px;
   min-height: 20px;
 }
-.rec-profile-img {
-  width: 100px;
+.rec-img {
+  min-width: 50px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   display: block;
   border: 5px;
@@ -175,6 +178,7 @@ input {
   flex: 1;
   gap: 5px;
   margin-bottom: 10px;
+  min-width: 0;
 }
 
 .album-con {
@@ -183,6 +187,19 @@ input {
   justify-content: space-between;
   padding: 20px;
   gap: 10px;
+}
+.truncate-song {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 100px;
+  max-width: 200px;
+}
+.truncate-artist {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
 }
 @media (max-width: 1670px) {
   .footer-container {
@@ -201,5 +218,18 @@ input {
 
   .footer-container {
     margin-top: 20px;
+  }
+  .truncate-song {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 100px;
+    max-width: 400px;
+  }
+  .truncate-artist {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
   }
 }

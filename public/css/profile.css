@@ -40,7 +40,7 @@
   filter: brightness(0) invert(1);
 }
 .profile-background-photo {
-  background-image: url("/public/assets/profile-background-photo.avif");
+  background-image: url("/assets/profile-background-photo.avif");
   width: 100%;
   height: 250px;
 }

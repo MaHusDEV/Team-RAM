@@ -1,0 +1,19 @@
+<aside
+  class="rec-music text-container w-full min-w-[200px] flex items-center gap-4"
+>
+  <!-- IMAGE -->
+  <div class="shrink-0">
+    <img src="<%= track.albumImage %>" alt="profile-img" class="rec-img" />
+  </div>
+  <!-- TEXT -->
+  <div class="flex flex-row justify-between w-full min-w-0">
+    <div class="min-w-0 w-full">
+      <h2 class="truncate-song font-semibold text-2xl">
+        <a href="/details"><%= track.title %></a>
+      </h2>
+      <p class="truncate-artist text-xl">
+        <a href="/details"><%= track.artistName %></a>
+      </p>
+    </div>
+  </div>
+</aside>

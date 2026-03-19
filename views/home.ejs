@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/output.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/general.css" />
+    <title>Home</title>
+  </head>
+  <body class="app-container">
+    <%- include("partials/header")%>
+    
+    <main class="main-container">
+      <div class="logo flex flex-row justify-center items-center h-[250px]">
+        <p class="text-6xl font-semibold">MusicMatch</p>
+      </div>
+
+      <div
+        class=" flex flex-col md:flex-row h-max"
+      >
+        <div class="flex flex-col md:w-[50%] md:max-w-[50%]">
+          <p class="text-2xl pl-5 font-semibold">Ga er weer mee verder</p>
+          <div class="gradient-start grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
+            <%
+              const shuffled = [...songs].sort(() => Math.random() - 0.5);
+              const firstBlock = shuffled.slice(0, 4);
+              const secondBlock = shuffled.slice(4, 8);
+            %>
+            <% firstBlock.forEach((track) => { %>
+            <%- include("partials/songoverview" ,{ track: track })%>
+            <% });  %>
+          </div>
+        </div>
+        <div class="flex flex-col md:w-[50%] md:max-w-[50%] ">
+          <p class="text-2xl pl-5 font-semibold">Populair voor jou</p>
+          <div class="gradient-end grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
+            <% secondBlock.forEach((track) => { %>
+            <%- include("partials/songoverview" ,{ track: track })%>
+            <% });  %>
+          </div>
+        </div>
+      </div>
+      <p class="text-2xl pl-5 font-semibold">Trending per genre</p>
+      <div class="main-gradient-container h-max p-5">
+        <aside class="genre-scroll pb-1 text-xl">
+          <p class="genre">R&B</p>
+          <p class="genre">Indie</p>
+          <p class="genre">Latin</p>
+          <p class="genre">Rock, Metal,Punk</p>
+          <p class="genre">Pop</p>
+          <p class="genre">Hip Hop & Rap</p>
+        </aside>
+        <div class="trend-con">
+          <% songs.forEach((track) => { %>
+          <aside class="rec-music text-container w-full flex items-center gap-4">
+            <!-- IMAGE -->
+            <div class="shrink-0">
+              <img src="<%= track.albumImage %>" alt="profile-img" class="rec-img" />
+            </div>
+            <!-- TEXT -->
+            <div class="flex flex-row justify-between w-full">
+              <div>
+                <h2 class="truncate-song font-semibold text-2xl">
+                  <a href="/details"><%= track.title %></a>
+                </h2>
+                <p class="truncate-artist text-xl">
+                  <a href="/details"><%= track.artistName %></a>
+                </p>
+              </div>
+            </div>
+          </aside>
+          <% }) %>
+        </div>
+      </div>
+      <p class="text-2xl pl-5 font-semibold">Albums voor jou</p>
+      <div class="main-gradient-container album-con">
+        
+        <div
+          class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition "
+        >
+          <img
+            src="/assets/chillvibes.jpg"
+            class="w-full h-36 object-cover"
+            alt="album img"
+          />
+          <div class="p-4">
+            <h2 class="font-semibold text-2xl">Late Night</h2>
+            <p class="text-sm text-gray-600 text-xl">Night vibes</p>
+          </div>
+        </div>
+      </div>  
+    </main>
+    <%- include("partials/footer")%>
+  </body>
+</html>

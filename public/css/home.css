@@ -24,6 +24,19 @@
   border-radius: 10px;
   background-color: var(--music-cont-color);
   min-width: max-content;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+.genre-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.genre-scroll::-webkit-scrollbar {
+  display: none;
 }
 .gradient-start {
   background: linear-gradient(
@@ -66,10 +79,9 @@ main {
 }
 @media (max-width: 768px) {
   .trend-con {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-
 @media (min-width: 768px) {
   .gradient-start {
     background: linear-gradient(135deg, var(--color-header) 0%, #7d92a7 50%);
