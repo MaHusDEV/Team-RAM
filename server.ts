@@ -3,6 +3,12 @@ import path from "path";
 import { getSongs, getSongById } from "./api";
 import { Track } from "./types/trackType";
 import dotenv from "dotenv";
+import {
+  connectDB,
+  getSongsFromDB,
+  getSongByIdFromDB,
+  getDB,
+} from "./db/database";
 
 dotenv.config();
 const server = express();
@@ -14,7 +20,7 @@ server.set("views", path.join(__dirname, "views"));
 
 server.get("/", async (req: Request, res: Response) => {
   try {
-    const songs = await getSongs();
+    const songs = await getSongsFromDB();
     res.render("home", { songs });
   } catch (err) {
     console.log(err);
@@ -25,15 +31,39 @@ server.get(
   "/details/:id",
   async (req: Request<{ id: string }>, res: Response) => {
     try {
-      const track = await getSongById(req.params.id);
-      const songs = await getSongs();
-      if (!track) {
+      const data = await getSongByIdFromDB(req.params.id);
+
+      if (!data) {
         return res.send("Track not found");
       }
 
-      const filteredSongs = songs.filter((s) => s.id !== track.id);
+      const { track, artist } = data;
 
-      res.render("details", { track, songs: filteredSongs });
+      const songs = (await getSongsFromDB(30))
+        .filter((s) => s.id !== track.id)
+        .slice(0, 12);
+
+      const artistId = track.artists?.[0]?.id;
+
+      let moreFromArtist: any[] = [];
+
+      if (artistId) {
+        moreFromArtist = await getDB()
+          .collection("tracks")
+          .find({
+            "artists.id": artistId,
+            id: { $ne: track.id },
+          })
+          .limit(12)
+          .toArray();
+      }
+
+      res.render("details", {
+        track,
+        artist,
+        songs,
+        moreFromArtist,
+      });
     } catch (error) {
       console.error(error);
       res.send("Error loading track");
@@ -67,5 +97,6 @@ server.get("/compare", async (req: Request, res: Response) => {
 
 const PORT = 3000;
 server.listen(PORT, async () => {
+  await connectDB();
   console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -26,6 +26,7 @@
               const shuffled = [...songs].sort(() => Math.random() - 0.5);
               const firstBlock = shuffled.slice(0, 4);
               const secondBlock = shuffled.slice(4, 8);
+              const genreBlock = shuffled.slice(8, 20);
             %>
             <% firstBlock.forEach((song) => { %>
             <%- include("partials/songoverview" ,{ song: song })%>
@@ -52,8 +53,8 @@
           <p class="genre">Hip Hop & Rap</p>
         </aside>
         <div class="trend-con">
-          <% songs.forEach((song) => { %>
-          <%- include("partials/songoverview" ,{ song: song })%>
+          <% genreBlock.forEach((song) => { %>
+            <%- include("partials/songoverview", { song: song }) %>
           <% }) %>
         </div>
       </div>

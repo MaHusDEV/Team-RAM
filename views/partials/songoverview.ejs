@@ -3,16 +3,20 @@
 >
   <!-- IMAGE -->
   <div class="shrink-0">
-    <img src="<%= song.albumImage %>" alt="profile-img" class="rec-img" />
+    <img
+      src="<%= song.album.images[0]?.url %>"
+      alt="profile-img"
+      class="rec-img"
+    />
   </div>
   <!-- TEXT -->
   <div class="flex flex-row justify-between w-full min-w-0">
     <div class="min-w-0 w-full">
       <h2 class="truncate-song font-semibold text-2xl">
-        <a href="/details/<%= song.id %>"><%= song.title %></a>
+        <a href="/details/<%= song.id %>"><%= song.name %></a>
       </h2>
       <p class="truncate-artist text-xl">
-        <a href="/details/<%= song.id %>"><%= song.artistName %></a>
+        <a href="/details/<%= song.id %>"><%= song.artists[0]?.name %></a>
       </p>
     </div>
   </div>

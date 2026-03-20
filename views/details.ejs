@@ -20,7 +20,7 @@
           <aside class="image-container">
             <img
               id="albumImage"
-              src="<%= track.albumImage %>"
+              src="<%= track.album.images[0]?.url %>"
               alt="music image"
               class="w-[100%] h-auto md:w-[300px] md:h-[250px]"
               crossorigin="anonymous"
@@ -31,15 +31,15 @@
             <div>
               <img
                 class="profile-img"
-                src="<%= track.albumImage %>"
+                src="<%= artist?.images?.[0]?.url || track.album.images[0]?.url %>"
                 alt="Profile Photo "
               />
             </div>
             <!--Artist Name -->
             <div class="logo-like-space">
               <div class="text-color">
-                <p class="text-3xl font-semibold"><%= track.title %></p>
-                <p class="text-xl"><%= track.artistName %></p>
+                <p class="text-3xl font-semibold"><%= track.name %></p>
+                <p class="text-xl"><%= track.artists[0]?.name %></p>
               </div>
               
             </div>
@@ -48,26 +48,25 @@
             <div class="artist-description p-5 text-color">
               <p>
                 <em>
-                  Stepan Burban is een Oekraïense rapper, zanger, componist,
-                  regisseur en muziekproducer, beter bekend onder zijn
-                  artiestennamen
-                  <strong class="text-color">Kashlyayuchyi Ed</strong> en
-                  <strong class="text-color">Palindrom</strong>.
+                  <strong><%= artist?.name || track.artists[0]?.name %></strong>
+                  is an artist featured on the track
+                  <strong><%= track.name %></strong>.
                 </em>
               </p>
             </div>
           </div>
         </div>
 
-        <div class="main-gradient-container flex flex-row gap-[10px] pl-2.5">
-          <button>
+        <div class="main-gradient-container flex flex-row gap-[10px] pl-2.5" data-id="<%= track.id %>">
+          
+          <button id="playBtn">
             <img
               src="/assets/playButton.png"
               alt="Play button"
               class="m-12 h-12 play-btn"
             />
           </button>
-          <button>
+          <button id="addBtb">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -83,7 +82,7 @@
               />
             </svg>
           </button>
-          <button>
+          <button id="likeBtn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -99,7 +98,7 @@
               />
             </svg>
           </button>
-          <button>
+          <button id="moreBtn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -115,6 +114,7 @@
               />
             </svg>
           </button>
+          <p><%= track.popularity %></p>
         </div>
         <!--Recommended -->
         <div class="recommended-section">
@@ -126,9 +126,9 @@
               class="rec-icon"
             />
           </div>
-
+          
           <div class="rec-container main-gradient-container" id="songs">
-            <% songs.forEach((song) => { %>
+            <% moreFromArtist.forEach((song) => { %>
             <%- include("partials/songoverview" ,{ song: song })%>
             <% });  %>
           </div>
