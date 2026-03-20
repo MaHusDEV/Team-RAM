@@ -201,6 +201,25 @@ input {
   text-overflow: ellipsis;
   max-width: 200px;
 }
+@media (min-width: 1960px) {
+  .footer-container {
+    margin-top: 20px;
+  }
+
+  .truncate-song {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 100px;
+    max-width: 600px;
+  }
+  .truncate-artist {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+  }
+}
 @media (max-width: 1670px) {
   .footer-container {
     margin-top: 20px;

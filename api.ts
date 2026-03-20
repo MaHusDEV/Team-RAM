@@ -21,6 +21,7 @@ async function getToken(): Promise<string> {
   return data.access_token;
 }
 
+let songs: any[] = [];
 export async function getSongs(): Promise<any[]> {
   const token = await getToken();
 
@@ -43,7 +44,7 @@ export async function getSongs(): Promise<any[]> {
 
   const tracks = data.tracks.items;
 
-  const result = tracks.map((track: any) => {
+  songs = tracks.map((track: any) => {
     return {
       id: track.id,
       title: track.name,
@@ -58,8 +59,13 @@ export async function getSongs(): Promise<any[]> {
       albumImage: track.album.images?.[0]?.url || "/assets/default.jpg",
     };
   });
-
-  return result;
+  return songs;
 }
+export async function getSongById(id: string) {
+  if (songs.length === 0) {
+    await getSongs();
+  }
 
+  return songs.find((song) => song.id === id);
+}
 export {};

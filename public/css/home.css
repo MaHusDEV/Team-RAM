@@ -23,7 +23,6 @@
   border: 5px solid var(--music-cont-color);
   border-radius: 10px;
   background-color: var(--music-cont-color);
-  min-width: max-content;
   flex: 0 0 auto;
   white-space: nowrap;
 }
@@ -32,8 +31,17 @@
   gap: 10px;
   overflow-x: auto;
   overflow-y: hidden;
-  white-space: nowrap;
   max-width: 100%;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.genre-scroll {
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+
+.genre-scroll:active {
+  cursor: grabbing;
 }
 .genre-scroll::-webkit-scrollbar {
   display: none;

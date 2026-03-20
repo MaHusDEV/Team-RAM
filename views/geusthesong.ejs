@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/output.css" />
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/guesthesong.css" />
+
+    <title>Document</title>
+  </head>
+  <body class="app-container">
+    <%- include("partials/header")%>
+    <main>
+      <div class="logo flex flex-row justify-center items-center h-[250px]">
+        <p class="text-6xl font-semibold">Raad het liedje</p>
+      </div>
+
+      <section class="section flex justify-center py-24">
+        <div
+          class="main-gradient-container rounded-2xl shadow-lg w-full max-w-2xl p-16 space-y-12"
+        >
+          <!-- muziekplaat -->
+          <div class="flex justify-center mb-16">
+            <div
+              class="relative w-44 h-44 rounded-full bg-gray-300 flex items-center justify-center shadow-inner"
+            >
+              <!-- album image -->
+              <img
+                src="https://picsum.photos/300"
+                class="absolute w-full h-full object-cover rounded-full opacity-70"
+              />
+
+              <!-- play knop -->
+              <button
+                class="relative w-20 h-20 bg-white rounded-full flex items-center justify-center shadow hover:scale-105 transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-8 h-8 text-gray-700 ml-1"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <p class="text-center mb-12 p-4 text-2xl font-semibold">
+            Luister naar het fragment en raad het liedje
+          </p>
+
+          <!-- input velden -->
+          <div class="grid md:grid-cols-2 gap-12 mb-16">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <label class="block text-sm mb-2 text-2xl font-semibold">
+                Artist
+              </label>
+
+              <input
+                type="text"
+                placeholder="Naam van de artiest"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              />
+            </div>
+
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <label class="block text-sm mb-2 text-2xl font-semibold">
+                Song
+              </label>
+
+              <input
+                type="text"
+                placeholder="Titel van het liedje"
+                class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              />
+            </div>
+          </div>
+
+          <!-- knop -->
+          <div class="flex justify-center p-5">
+            <button
+              class="bg-blue-500 text-white px-10 py-3 rounded-full hover:bg-blue-600 transition shadow"
+            >
+              Check
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include("partials/footer")%>
+  </body>
+</html>

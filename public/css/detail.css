@@ -60,7 +60,8 @@
   padding: 20px;
 }
 .text-color {
-  color: rgb(171, 165, 165) !important;
+  color: white !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 @media (max-width: 1660px) {
   .rec-container {

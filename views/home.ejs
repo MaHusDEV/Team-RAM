@@ -27,23 +27,23 @@
               const firstBlock = shuffled.slice(0, 4);
               const secondBlock = shuffled.slice(4, 8);
             %>
-            <% firstBlock.forEach((track) => { %>
-            <%- include("partials/songoverview" ,{ track: track })%>
+            <% firstBlock.forEach((song) => { %>
+            <%- include("partials/songoverview" ,{ song: song })%>
             <% });  %>
           </div>
         </div>
         <div class="flex flex-col md:w-[50%] md:max-w-[50%] ">
           <p class="text-2xl pl-5 font-semibold">Populair voor jou</p>
           <div class="gradient-end grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
-            <% secondBlock.forEach((track) => { %>
-            <%- include("partials/songoverview" ,{ track: track })%>
+            <% secondBlock.forEach((song) => { %>
+            <%- include("partials/songoverview" ,{ song: song })%>
             <% });  %>
           </div>
         </div>
       </div>
       <p class="text-2xl pl-5 font-semibold">Trending per genre</p>
-      <div class="main-gradient-container h-max p-5">
-        <aside class="genre-scroll pb-1 text-xl">
+      <div class="main-gradient-container h-max p-5 min-w-0">
+        <aside class="genre-scroll pb-1 text-xl ">
           <p class="genre">R&B</p>
           <p class="genre">Indie</p>
           <p class="genre">Latin</p>
@@ -52,24 +52,8 @@
           <p class="genre">Hip Hop & Rap</p>
         </aside>
         <div class="trend-con">
-          <% songs.forEach((track) => { %>
-          <aside class="rec-music text-container w-full flex items-center gap-4">
-            <!-- IMAGE -->
-            <div class="shrink-0">
-              <img src="<%= track.albumImage %>" alt="profile-img" class="rec-img" />
-            </div>
-            <!-- TEXT -->
-            <div class="flex flex-row justify-between w-full">
-              <div>
-                <h2 class="truncate-song font-semibold text-2xl">
-                  <a href="/details"><%= track.title %></a>
-                </h2>
-                <p class="truncate-artist text-xl">
-                  <a href="/details"><%= track.artistName %></a>
-                </p>
-              </div>
-            </div>
-          </aside>
+          <% songs.forEach((song) => { %>
+          <%- include("partials/songoverview" ,{ song: song })%>
           <% }) %>
         </div>
       </div>
