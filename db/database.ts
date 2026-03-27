@@ -1,5 +1,6 @@
 import { MongoClient, Db } from "mongodb";
 import dotenv from "dotenv";
+import { Track } from "../types/trackType";
 
 dotenv.config();
 
@@ -27,7 +28,7 @@ export function getDB() {
 }
 export async function getSongsFromDB(limit = 30) {
   const db = getDB();
-  return await db.collection("tracks").find().limit(limit).toArray();
+  return await db.collection<Track>("tracks").find().limit(limit).toArray();
 }
 export async function getSongByIdFromDB(id: string) {
   const db = getDB();
@@ -48,5 +49,30 @@ export async function getSongByIdFromDB(id: string) {
     track,
     artist,
   };
+}
+export async function createPlayList(name: string) {
+  const db = getDB();
+  const newPlaylist = {
+    id: Date.now.toString(),
+    name,
+    tracks: [],
+  };
+  await db.collection("playlists").insertOne(newPlaylist);
+  return newPlaylist;
+}
+export async function getPlaylists() {
+  const db = getDB();
+
+  return await db.collection("playlists").find().toArray();
+}
+export async function addSongToPlaylist(playlistId: string, trackId: string) {
+  const db = getDB();
+
+  await db.collection("playlists").updateOne(
+    { id: playlistId },
+    {
+      $addToSet: { tracks: trackId },
+    },
+  );
 }
 export {};

@@ -16,6 +16,7 @@
 .text {
   margin-left: 15px;
 }
+
 .logo-like-space {
   display: flex;
   justify-content: space-between;
@@ -60,7 +61,7 @@
   padding: 20px;
 }
 .text-color {
-  color: white !important;
+  color: rgb(255, 255, 255) !important;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 @media (max-width: 1660px) {

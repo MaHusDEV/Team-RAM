@@ -1,7 +1,5 @@
 import express, { Request, Response } from "express";
 import path from "path";
-import { getSongs, getSongById } from "./api";
-import { Track } from "./types/trackType";
 import dotenv from "dotenv";
 import {
   connectDB,
@@ -10,6 +8,7 @@ import {
   getDB,
 } from "./db/database";
 
+import { filterSongs } from "./scr/search";
 dotenv.config();
 const server = express();
 
@@ -79,8 +78,28 @@ server.get("/login", async (req: Request, res: Response) => {
 server.get("/register", async (req: Request, res: Response) => {
   res.render("register");
 });
+
 server.get("/search", async (req: Request, res: Response) => {
-  res.render("search");
+  try {
+    const { q, genre, sort } = req.query;
+    const songs = await getSongsFromDB(100);
+
+    const filtered = filterSongs(
+      songs,
+      (q as string) || "",
+      (genre as string) || "All",
+      (sort as string) || "popular",
+    );
+    res.render("search", {
+      songs: filtered,
+      query: q || "",
+      genre: genre || "All",
+      sort: sort || "popular",
+    });
+  } catch (err) {
+    console.error(err);
+    res.render("search", { songs: [] });
+  }
 });
 server.get("/collection", async (req: Request, res: Response) => {
   res.render("collection");

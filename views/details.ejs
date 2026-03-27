@@ -48,9 +48,9 @@
             <div class="artist-description p-5 text-color">
               <p>
                 <em>
-                  <strong><%= artist?.name || track.artists[0]?.name %></strong>
+                  <strong class="text-color"><%= artist?.name || track.artists[0]?.name %></strong>
                   is an artist featured on the track
-                  <strong><%= track.name %></strong>.
+                  <strong class="text-color"><%= track.name %></strong>.
                 </em>
               </p>
             </div>
@@ -58,7 +58,6 @@
         </div>
 
         <div class="main-gradient-container flex flex-row gap-[10px] pl-2.5" data-id="<%= track.id %>">
-          
           <button id="playBtn">
             <img
               src="/assets/playButton.png"

@@ -5,13 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/output.css" />
     <link rel="stylesheet" href="/css/general.css" />
-    <link rel="stylesheet" href="/css/LoginHandler.css" />
+    <link rel="stylesheet" href="/css/search.css" />
+
     <title>Registreren</title>
   </head>
 
   <body class="app-container">
     <%- include("partials/header")%>
-    <main class="main-container flex flex-col items-center"></main>
+    <main class="search-cont">
+      <div class="options">
+        <div>Genre</div>
+        <div class="genres genre-scroll">
+          <% ["All","Jazz","Rock","Hip Hop"].forEach(g => { %>
+            <a href="/search?q=<%= query || '' %>&genre=<%= g %>&sort=<%= sort || 'popular' %>">
+              <button class="genre <%= genre === g ? 'active' : '' %>">
+                <%= g %>
+              </button>
+            </a>
+          <% }) %>
+        </div>
+        <form method="GET">
+          <input type="hidden" name="q" value="<%= query || '' %>" />
+          <input type="hidden" name="genre" value="<%= genre || 'All' %>" />
+
+          <select name="sort" onchange="this.form.submit()">
+            <option value="popular" <%= sort==='popular'?'selected':'' %>>Meest populair</option>
+            <option value="new" <%= sort==='new'?'selected':'' %>>Nieuwste</option>
+            <option value="az" <%= sort==='az'?'selected':'' %>>A-Z</option>
+            <option value="duration" <%= sort==='duration'?'selected':'' %>>Duur</option>
+          </select>
+        </form>
+      </div>
+      <div class="search-bar">
+        <form method="GET" action="/search" class="search-bar">
+          <input
+            type="search"
+            name="q"
+            id="search"
+            value="<%= query || '' %>"
+            placeholder="Zoek..."
+          />
+        </form>
+      </div>
+      <div class="results result-cont">
+        <% if (songs && songs.length > 0) { %>
+          <% songs.forEach((song) => { %>
+            <%- include("partials/songoverview", { song }) %>
+          <% }) %>
+        <% } else { %>
+          <p>Geen resultaten gevonden</p>
+        <% } %>
+      </div>
+    </main>
 
     <%- include("partials/footer")%>
   </body>
