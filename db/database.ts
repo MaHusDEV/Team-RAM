@@ -75,4 +75,22 @@ export async function addSongToPlaylist(playlistId: string, trackId: string) {
     },
   );
 }
+async function saveSongs(songs: any[]) {
+  const db = getDB();
+  const collection = db.collection("tracks");
+
+  const operations = songs.map((song) => ({
+    updateOne: {
+      filter: { id: song.id },
+      update: {
+        $setOnInsert: song,
+      },
+      upsert: true,
+    },
+  }));
+
+  const result = await collection.bulkWrite(operations);
+
+  console.log("Saved:", result.upsertedCount);
+}
 export {};

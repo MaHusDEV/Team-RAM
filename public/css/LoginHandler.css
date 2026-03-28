@@ -9,7 +9,8 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 input {
-  background-color: var(--color-header-end);
+  background-color: #97c1ea;
+  box-shadow: 0 2 10px #97c1ea;
 }
 .btn {
   width: 180px;

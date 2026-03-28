@@ -21,7 +21,7 @@
       >
         <div class="flex flex-col md:w-[50%] md:max-w-[50%]">
           <p class="text-2xl pl-5 font-semibold">Ga er weer mee verder</p>
-          <div class="gradient-start grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
+          <div class=" grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
             <%
               const shuffled = [...songs].sort(() => Math.random() - 0.5);
               const firstBlock = shuffled.slice(0, 4);
@@ -35,7 +35,7 @@
         </div>
         <div class="flex flex-col md:w-[50%] md:max-w-[50%] ">
           <p class="text-2xl pl-5 font-semibold">Populair voor jou</p>
-          <div class="gradient-end grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
+          <div class=" grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
             <% secondBlock.forEach((song) => { %>
             <%- include("partials/songoverview" ,{ song: song })%>
             <% });  %>
@@ -43,23 +43,33 @@
         </div>
       </div>
       <p class="text-2xl pl-5 font-semibold">Trending per genre</p>
-      <div class="main-gradient-container h-max p-5 min-w-0">
-        <aside class="genre-scroll pb-1 text-xl ">
-          <p class="genre">R&B</p>
-          <p class="genre">Indie</p>
-          <p class="genre">Latin</p>
-          <p class="genre">Rock, Metal,Punk</p>
-          <p class="genre">Pop</p>
-          <p class="genre">Hip Hop & Rap</p>
-        </aside>
-        <div class="trend-con">
-          <% genreBlock.forEach((song) => { %>
-            <%- include("partials/songoverview", { song: song }) %>
+      <div class=" h-max p-5 min-w-0">
+        <div class="genres genre-scroll">
+          <% ["All","Jazz","Rock","Hip Hop"].forEach(g => { %>
+            <a 
+              href="/?q=<%= query || '' %>&genre=<%= g %>&sort=<%= sort || 'popular' %>"
+              class="genre <%= genre === g ? 'active' : '' %>"
+            >
+              <%= g %>
+            </a>
           <% }) %>
+        </div>
+        <div class="trend-con">
+          <%
+            const shuffledTrending = [...trendingSongs].sort(() => Math.random() - 0.5);
+            const finalTrending = shuffledTrending.slice(0, 12);
+          %>
+          <% if (finalTrending && finalTrending.length > 0) { %>
+            <% finalTrending.forEach((song) => { %>
+              <%- include("partials/songoverview", { song }) %>
+            <% }) %>
+          <% } else { %>
+          <p class="pt-5 text-xl">Geen resultaten gevonden</p>
+          <% } %>
         </div>
       </div>
       <p class="text-2xl pl-5 font-semibold">Albums voor jou</p>
-      <div class="main-gradient-container album-con">
+      <div class="album-con">
         
         <div
           class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition "

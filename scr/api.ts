@@ -1,4 +1,4 @@
-async function getToken(): Promise<string> {
+export async function getToken(): Promise<string> {
   const res = await fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
     headers: {
@@ -20,7 +20,6 @@ async function getToken(): Promise<string> {
   }
   return data.access_token;
 }
-
 let songs: any[] = [];
 export async function getSongs(): Promise<any[]> {
   const token = await getToken();

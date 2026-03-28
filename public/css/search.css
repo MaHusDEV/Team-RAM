@@ -1,18 +1,19 @@
 .search-cont {
   display: grid;
   grid-template-areas:
-    "option search-bar"
-    "option results";
-  grid-template-columns: 250px 1fr;
-  grid-template-rows: 40px 1fr;
+    "option"
+    "results";
+  grid-template-rows: 250px 1fr;
 }
 .options {
   grid-area: option;
-  background-color: var(--color-header);
+  align-items: center;
 }
 .search-bar {
-  grid-area: search-bar;
   background-color: var(--color-button);
+  border: 3px;
+  border-radius: 25px;
+  width: 250px;
 }
 .results {
   grid-area: results;
@@ -23,23 +24,6 @@
   flex-direction: column;
   gap: 15px;
   padding: 15px;
-}
-.genres {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-}
-.genre {
-  padding: 6px 12px;
-  border-radius: 20px;
-  border: none;
-  background: #ffffff20;
-  color: white;
-  cursor: pointer;
-  white-space: nowrap;
-}
-.genre.active {
-  background: #1db954;
 }
 .sort {
   padding: 8px;

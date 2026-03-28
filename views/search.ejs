@@ -14,13 +14,24 @@
     <%- include("partials/header")%>
     <main class="search-cont">
       <div class="options">
-        <div>Genre</div>
+        <div class="search-bar">
+          <form method="GET" action="/search" class="search-bar">
+            <input
+              type="search"
+              name="q"
+              id="search"
+              value="<%= query || '' %>"
+              placeholder="Zoek..."
+            />
+          </form>
+        </div>
         <div class="genres genre-scroll">
           <% ["All","Jazz","Rock","Hip Hop"].forEach(g => { %>
-            <a href="/search?q=<%= query || '' %>&genre=<%= g %>&sort=<%= sort || 'popular' %>">
-              <button class="genre <%= genre === g ? 'active' : '' %>">
-                <%= g %>
-              </button>
+            <a 
+              href="/search?q=<%= query || '' %>&genre=<%= g %>&sort=<%= sort || 'popular' %>"
+              class="genre <%= genre === g ? 'active' : '' %>"
+            >
+              <%= g %>
             </a>
           <% }) %>
         </div>
@@ -35,23 +46,22 @@
             <option value="duration" <%= sort==='duration'?'selected':'' %>>Duur</option>
           </select>
         </form>
+        
       </div>
-      <div class="search-bar">
-        <form method="GET" action="/search" class="search-bar">
-          <input
-            type="search"
-            name="q"
-            id="search"
-            value="<%= query || '' %>"
-            placeholder="Zoek..."
-          />
-        </form>
-      </div>
+      
       <div class="results result-cont">
         <% if (songs && songs.length > 0) { %>
-          <% songs.forEach((song) => { %>
+
+          <%
+            const displaySongs = [...songs]
+              .sort(() => Math.random() - 0.5) 
+              .slice(0, 36); 
+          %>
+
+          <% displaySongs.forEach((song) => { %>
             <%- include("partials/songoverview", { song }) %>
           <% }) %>
+
         <% } else { %>
           <p>Geen resultaten gevonden</p>
         <% } %>

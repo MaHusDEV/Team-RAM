@@ -24,8 +24,13 @@
   width: 100%;
   margin-right: 10px;
 }
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  gap: 10px;
+}
 .discription-container {
-  width: 350px;
   display: flex;
   flex-direction: column;
   gap: 20px;

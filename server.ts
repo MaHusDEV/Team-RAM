@@ -19,8 +19,24 @@ server.set("views", path.join(__dirname, "views"));
 
 server.get("/", async (req: Request, res: Response) => {
   try {
-    const songs = await getSongsFromDB();
-    res.render("home", { songs });
+    const { q, genre, sort } = req.query;
+
+    const allSongs = await getSongsFromDB(100);
+
+    const filteredSongs = filterSongs(
+      allSongs,
+      (q as string) || "",
+      (genre as string) || "All",
+      (sort as string) || "popular",
+    );
+
+    res.render("home", {
+      songs: allSongs,
+      trendingSongs: filteredSongs,
+      query: q || "",
+      genre: genre || "All",
+      sort: sort || "popular",
+    });
   } catch (err) {
     console.log(err);
     res.render("home", { songs: [] });
@@ -78,7 +94,6 @@ server.get("/login", async (req: Request, res: Response) => {
 server.get("/register", async (req: Request, res: Response) => {
   res.render("register");
 });
-
 server.get("/search", async (req: Request, res: Response) => {
   try {
     const { q, genre, sort } = req.query;

@@ -6,19 +6,23 @@
   --header-background: #f6e3e3;
   --color-text: #000000;
   --hover-text-color: rgb(73, 95, 91);
-  --music-cont-color: #ffffff;
+  --music-cont-color: #21b8cf;
 }
 * {
   margin: 0;
 }
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 body {
   font-family: Arial, sans-serif;
   color: var(--color-text) !important;
-  background: linear-gradient(135deg, #b6cce4, #a8c0da);
+
+  background-image: url(../assets/background.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .app-container {
@@ -46,11 +50,7 @@ body {
 }
 .header-container,
 .footer-container {
-  background: linear-gradient(
-    135deg,
-    var(--color-header),
-    var(--color-header-end)
-  );
+  background: linear-gradient(135deg, #86aed7, #97c1ea);
 }
 .hed-icon {
   width: 30px;
@@ -84,11 +84,7 @@ a:hover {
   grid-area: main;
 }
 .main-gradient-container {
-  background: linear-gradient(
-    135deg,
-    var(--color-header),
-    var(--color-header-end)
-  );
+  background: linear-gradient(135deg, #86aed7, #97c1ea);
 }
 .footer-container {
   grid-area: footer;
@@ -142,11 +138,12 @@ input {
   border-radius: 10px;
   padding-right: 10px;
   margin-top: 5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 14px rgba(2, 49, 94, 0.15);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
   min-width: 0;
+  background: linear-gradient(135deg, #08d1f0, #d8ecec);
 }
 .rec-music:hover {
   transform: translateY(-2px);
@@ -200,6 +197,24 @@ input {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 200px;
+}
+
+.genres {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+.genre {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  background: #ffffff20;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.genre.active {
+  background: #1db954;
 }
 @media (min-width: 1960px) {
   .footer-container {
