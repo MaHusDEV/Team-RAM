@@ -51,14 +51,7 @@
       
       <div class="results result-cont">
         <% if (songs && songs.length > 0) { %>
-
-          <%
-            const displaySongs = [...songs]
-              .sort(() => Math.random() - 0.5) 
-              .slice(0, 36); 
-          %>
-
-          <% displaySongs.forEach((song) => { %>
+          <% songs.forEach((song) => { %>
             <%- include("partials/songoverview", { song }) %>
           <% }) %>
 

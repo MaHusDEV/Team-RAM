@@ -13,14 +13,14 @@
     
     <main class="main-container">
       <div class="logo flex flex-row justify-center items-center h-[250px]">
-        <p class="text-6xl font-semibold">MusicMatch</p>
+        <p class="text-6xl font-semibold intro">Ontdek een nieuwe wereld van muziek met MusixMatch</p>
       </div>
 
       <div
-        class=" flex flex-col md:flex-row h-max"
+        class=" flex flex-col md:flex-row h-max pt-5"
       >
         <div class="flex flex-col md:w-[50%] md:max-w-[50%]">
-          <p class="text-2xl pl-5 font-semibold">Ga er weer mee verder</p>
+          <p class="text-2xl pl-5 font-semibold intro">Ga er weer mee verder</p>
           <div class=" grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
             <%
               const shuffled = [...songs].sort(() => Math.random() - 0.5);
@@ -33,8 +33,8 @@
             <% });  %>
           </div>
         </div>
-        <div class="flex flex-col md:w-[50%] md:max-w-[50%] ">
-          <p class="text-2xl pl-5 font-semibold">Populair voor jou</p>
+        <div class="flex flex-col md:w-[50%] md:max-w-[50%]">
+          <p class="text-2xl pl-5 font-semibold intro">Populair voor jou</p>
           <div class=" grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
             <% secondBlock.forEach((song) => { %>
             <%- include("partials/songoverview" ,{ song: song })%>
@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      <p class="text-2xl pl-5 font-semibold">Trending per genre</p>
+      <p class="text-2xl pl-5 font-semibold intro">Trending per genre</p>
       <div class=" h-max p-5 min-w-0">
         <div class="genres genre-scroll">
           <% ["All","Jazz","Rock","Hip Hop"].forEach(g => { %>
@@ -64,15 +64,15 @@
               <%- include("partials/songoverview", { song }) %>
             <% }) %>
           <% } else { %>
-          <p class="pt-5 text-xl">Geen resultaten gevonden</p>
+          <p class="pt-5 text-xl intro">Geen resultaten gevonden</p>
           <% } %>
         </div>
       </div>
-      <p class="text-2xl pl-5 font-semibold">Albums voor jou</p>
+      <p class="text-2xl pl-5 font-semibold intro">Albums voor jou</p>
       <div class="album-con">
         
         <div
-          class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition "
+          class="rec-music-gradient w-56 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
         >
           <img
             src="/assets/chillvibes.jpg"
@@ -81,7 +81,7 @@
           />
           <div class="p-4">
             <h2 class="font-semibold text-2xl">Late Night</h2>
-            <p class="text-sm text-gray-600 text-xl">Night vibes</p>
+            <p class="text-sm text-xl">Night vibes</p>
           </div>
         </div>
       </div>  
