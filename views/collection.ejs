@@ -17,7 +17,42 @@
       </div>
 
       <!-- container -->
-      <div class="">
+       <div class="">
+        <div class="album-con">
+
+          <% if (songs && songs.length > 0) { %>
+            <% songs.slice(0, 12).forEach((song) => { %>
+
+              <div
+                class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+              >
+                <img
+                  src="<%= song.album?.images?.[0]?.url || '/assets/chillvibes.jpg' %>"
+                  class="w-full h-36 object-cover"
+                  alt="album cover"
+                />
+
+                <div class="p-4">
+                  <h2 class="font-semibold text-2xl">
+                    <%= song.album?.name || 'Album' %>
+                  </h2>
+
+                  <p class="text-sm text-2xl">
+                    <%= song.artists?.[0]?.name || 'Unknown Artist' %>
+                  </p>
+                </div>
+              </div>
+
+            <% }) %>
+          <% } else { %>
+
+            <p>Geen albums gevonden</p>
+
+          <% } %>
+
+        </div>
+      </div>
+      <!-- <div class="">
         <div class="album-con">
           <div
             class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
@@ -103,8 +138,8 @@
               <p class="text-sm text-2xl">Night vibes</p>
             </div>
           </div>
-        </div>
-      </div>
+        </div> 
+      </div> -->
     </main>
 
     <%- include("partials/footer")%>

@@ -117,7 +117,18 @@ server.get("/search", async (req: Request, res: Response) => {
   }
 });
 server.get("/collection", async (req: Request, res: Response) => {
-  res.render("collection");
+  try {
+    const songs = await getSongsFromDB(30);
+
+    res.render("collection", {
+      songs,
+    });
+  } catch (error) {
+    console.error(error);
+    res.render("collection", {
+      songs: [],
+    });
+  }
 });
 server.get("/geusthesong", async (req: Request, res: Response) => {
   res.render("geusthesong");
