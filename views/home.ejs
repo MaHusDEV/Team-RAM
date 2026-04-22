@@ -11,16 +11,16 @@
   <body class="app-container">
     <%- include("partials/header")%>
     
-    <main class="main-container">
+    <main class="container">
       <div class="logo flex flex-row justify-center items-center h-[250px]">
-        <p class="text-6xl font-semibold intro">Ontdek een nieuwe wereld van muziek met MusixMatch</p>
+        <p class="text-6xl font-semibold intro">MusicMatch</p>
       </div>
       <div
-        class=" flex flex-col md:flex-row h-max pt-5"
+        class=" flex flex-col md:flex-row h-max pt-5 gap-2.5"
       >
         <div class="flex flex-col md:w-[50%] md:max-w-[50%]">
-          <p class="text-2xl pl-5 font-semibold intro">Ga er weer mee verder</p>
-          <div class=" grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
+          <p class="text-2xl  font-semibold intro pb-5">Ga er weer mee verder</p>
+          <div class=" grid grid-cols-1 md:grid-cols-2 gap-4 ">
             <%
               const shuffled = [...songs].sort(() => Math.random() - 0.5);
               const firstBlock = shuffled.slice(0, 4);
@@ -33,16 +33,16 @@
           </div>
         </div>
         <div class="flex flex-col md:w-[50%] md:max-w-[50%]">
-          <p class="text-2xl pl-5 font-semibold intro">Populair voor jou</p>
-          <div class=" grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
+          <p class="text-2xl font-semibold intro pb-5">Populair voor jou</p>
+          <div class=" grid grid-cols-1 md:grid-cols-2 gap-4 ">
             <% secondBlock.forEach((song) => { %>
             <%- include("partials/songoverview" ,{ song: song })%>
             <% });  %>
           </div>
         </div>
       </div>
-      <p class="text-2xl pl-5 font-semibold intro">Trending per genre</p>
-      <div class=" h-max p-5 min-w-0">
+      <p class="text-2xl font-semibold intro pb-5 pt-5">Trending per genre</p>
+      <div class=" h-max min-w-0">
         <div class="genres genre-scroll">
           <% ["All","Jazz","Rock","Hip Hop"].forEach(g => { %>
             <a 
@@ -53,10 +53,10 @@
             </a>
           <% }) %>
         </div>
-        <div class="trend-con">
+        <div class="trend-con pb-5 pt-5">
           <%
             const shuffledTrending = [...trendingSongs].sort(() => Math.random() - 0.5);
-            const finalTrending = shuffledTrending.slice(0, 12);
+            const finalTrending = shuffledTrending.slice(0, 8);
           %>
           <% if (finalTrending && finalTrending.length > 0) { %>
             <% finalTrending.forEach((song) => { %>
@@ -67,7 +67,7 @@
           <% } %>
         </div>
       </div>
-      <p class="text-2xl pl-5 font-semibold intro">Albums voor jou</p>
+      <p class="text-2xl font-semibold intro pb-5 pt-5">Albums voor jou</p>
       <div class="album-con">
         
         <div

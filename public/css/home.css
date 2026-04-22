@@ -55,18 +55,13 @@
 }
 .trend-con {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 1fr;
   align-content: start;
   gap: 15px;
 }
 main {
   margin-bottom: 20px;
-}
-@media (max-width: 1660px) {
-  .trend-con {
-    grid-template-columns: repeat(5, 1fr);
-  }
 }
 @media (max-width: 1384px) {
   .trend-con {

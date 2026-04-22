@@ -16,7 +16,9 @@ server.use(express.urlencoded({ extended: true }));
 server.set("view engine", "ejs");
 server.use(express.static("./public"));
 server.set("views", path.join(__dirname, "views"));
-
+server.get("/lading", async (req: Request, res: Response) => {
+  res.render("lading");
+});
 server.get("/", async (req: Request, res: Response) => {
   try {
     const { q, genre, sort } = req.query;
