@@ -10,7 +10,7 @@
   </head>
   <body class="app-container">
     <%- include("partials/header")%>
-    <main class="main-container">
+    <main class="container">
       <div class="detail-container">
         <!-- Logo -->
         <div
@@ -116,7 +116,7 @@
         </div>
         <!--Recommended -->
         <div class="recommended-section">
-          <div class="rec-header pt-5">
+          <div class="rec-header pb-5 pt-5">
             <p class="font-semibold intro ">Meer van deze auteur</p>
             <img
               src="/assets/arrow-down.png"
@@ -125,14 +125,14 @@
             />
           </div>
           
-          <div class="rec-container " id="songs">
+          <div class="rec-container" id="songs">
             <% moreFromArtist.forEach((song) => { %>
             <%- include("partials/songoverview" ,{ song: song })%>
             <% });  %>
           </div>
 
-          <div class="rec-header">
-            <p class="font-semibold intro">Ontdek nieuwe muziek</p>
+          <div class="rec-header pb-5 pt-5">
+            <p class="font-semibold intro ">Ontdek nieuwe muziek</p>
             <img
               src="/assets/arrow-down.png"
               alt="arrow-down"

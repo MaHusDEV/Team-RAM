@@ -1,5 +1,5 @@
 <aside
-  class="rec-music rec-music-gradient text-container w-full min-w-[200px] flex items-center gap-4"
+  class="rec-music rec-music-gradient text-container-song w-full min-w-[200px] flex items-center gap-4"
 >
   <!-- IMAGE -->
   <div class="shrink-0">
@@ -10,14 +10,12 @@
     />
   </div>
   <!-- TEXT -->
-  <div class="flex flex-row justify-between w-full min-w-0">
-    <div class="min-w-0 w-full">
-      <h2 class="truncate-song font-semibold text-2xl">
-        <a href="/details/<%= song.id %>"><%= song.name %></a>
-      </h2>
-      <p class="truncate-artist text-xl">
-        <a href="/details/<%= song.id %>"><%= song.artists[0]?.name %></a>
-      </p>
-    </div>
+  <div class="flex flex-col w-full min-w-0">
+    <h2 class="truncate-song font-semibold">
+      <a href="/details/<%= song.id %>"><%= song.name %></a>
+    </h2>
+    <p class="truncate-artist flex">
+      <a href="/details/<%= song.id %>"><%= song.artists[0]?.name %></a>
+    </p>
   </div>
 </aside>
