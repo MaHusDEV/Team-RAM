@@ -14,6 +14,7 @@
 html,
 body {
   min-height: 100%;
+  width: 100%;
 }
 body {
   font-family: Arial, sans-serif;
@@ -36,6 +37,11 @@ body {
   padding: 10px 20px;
   justify-content: center;
   align-content: center;
+}
+main {
+  grid-area: main;
+
+  width: 1200px;
 }
 .header-container {
   grid-area: header;
@@ -75,9 +81,6 @@ a:hover {
   transition: 0.2s;
 }
 
-.container {
-  grid-area: main;
-}
 .main-gradient-container {
   background: linear-gradient(135deg, #d6d6d6, #ffffff);
 }
@@ -261,11 +264,15 @@ input {
     margin-top: 20px;
   }
 }
-@media (max-width: 768px) {
-  .app-container {
-    grid-template-rows: auto 1fr auto;
+@media (max-width: 1220px) {
+  main {
+    width: 800px;
   }
-
+}
+@media (max-width: 768px) {
+  main {
+    width: 600px;
+  }
   .header-container {
     flex-direction: row;
     padding: 10px;
@@ -286,5 +293,10 @@ input {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 400px;
+  }
+}
+@media (max-width: 630px) {
+  main {
+    width: 400px;
   }
 }
