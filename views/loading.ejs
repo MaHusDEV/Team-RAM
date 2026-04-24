@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/output.css" />
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/loading.css" />
+
+    <title>Loading</title>
+  </head>
+
+  <body class="app-container">
+    <%- include("partials/header")%>
+
+    <main class="loading-grid">
+      <div class="box">
+        <img src="/assets/gameHub.jpg" alt="GameHub image" />
+        <div class="box-content">
+          <a onclick="notAvailable()">GameHub</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="/assets/social_music_match.jpg" alt="MusicMatch image" />
+        <div class="box-content">
+          <a href="/login">MusicMatch</a>
+        </div>
+      </div>
+
+      <div class="box"">
+        <img src="/assets/Lego_Masters.jpg" alt="LegoMaster image" />
+        <div class="box-content">
+          <a onclick="notAvailable()">LegoMaster</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-container">
+      <p>© 2026 MusicMatch - WPL Project</p>
+    </footer>
+    <script>
+      function notAvailable() {
+        alert("Project is niet beschikbaar");
+      }
+    </script>
+    <%- include("partials/footer")%>
+  </body>
+</html>

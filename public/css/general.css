@@ -18,28 +18,24 @@ body {
 body {
   font-family: Arial, sans-serif;
   color: var(--color-text) !important;
-  /*
-  background: linear-gradient(135deg, #dfdfdf, #f4f3f3);
-  */
 
-  background-image: url(../assets/background.avif);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(135deg, #0d5891, #17c3f7);
 }
 
 .app-container {
   display: grid;
-  grid-template-columns: 0.8fr;
-  grid-template-rows: 40px 1fr 40px;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header"
     "main"
     "footer";
+
   min-height: 100vh;
-  min-width: 100%;
-  margin-left: 10%;
-  margin-top: 10px;
+  max-width: 1200px;
+  margin: 10px auto 0 auto;
+  padding: 10px 20px;
+  justify-content: center;
+  align-content: center;
 }
 .header-container {
   grid-area: header;
@@ -48,11 +44,9 @@ body {
   gap: 10px;
   justify-content: space-between;
   align-items: center;
+
+  margin-bottom: 10px;
 }
-/*.header-container,
-.footer-container {
-  background: linear-gradient(135deg, #86aed7, #97c1ea);
-}*/
 .hed-icon {
   width: 30px;
   height: 30px;
@@ -83,20 +77,16 @@ a:hover {
 
 .container {
   grid-area: main;
-  margin: 0 auto;
 }
 .main-gradient-container {
-  background: linear-gradient(135deg, #86aed7, #97c1ea);
+  background: linear-gradient(135deg, #d6d6d6, #ffffff);
 }
 .footer-container {
   grid-area: footer;
   width: 100%;
-  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  margin-top: 0px;
 }
 .btn {
   display: inline-block;
@@ -147,7 +137,7 @@ input {
 
 .rec-music-gradient {
   /* background: linear-gradient(135deg, #08d1f0, #d8ecec);*/
-  background: linear-gradient(135deg, #ffffff, #ffffff);
+  background: linear-gradient(135deg, #d6d6d6, #ffffff);
 }
 .rec-music:hover {
   transform: translateY(-2px);
@@ -170,7 +160,8 @@ input {
   object-fit: cover;
   display: block;
   border: 5px;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .text-container {
@@ -228,6 +219,20 @@ input {
 }
 .genre.active {
   background: #c9c9c9;
+}
+.genre-scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.genre-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.genre-scroll::-webkit-scrollbar-thumb {
+  background: #ffffff40;
+  border-radius: 10px;
+}
+.genre-scroll::-webkit-scrollbar-thumb:hover {
+  background: #ffffff80;
 }
 .intro {
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);

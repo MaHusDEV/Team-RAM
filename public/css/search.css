@@ -31,20 +31,7 @@
   border: none;
   background: #ffffff20;
 }
-.genre-scroll {
-  overflow-x: auto;
-  scrollbar-width: thin;
-}
-.genre-scroll::-webkit-scrollbar {
-  height: 6px;
-}
-.genre-scroll::-webkit-scrollbar-thumb {
-  background: #ffffff40;
-  border-radius: 10px;
-}
-.genre-scroll::-webkit-scrollbar-thumb:hover {
-  background: #ffffff80;
-}
+
 .result-cont {
   display: grid;
   grid-template-columns: repeat(6, 1fr);

@@ -1,6 +1,7 @@
 import { MongoClient, Db } from "mongodb";
 import dotenv from "dotenv";
 import { Track } from "../types/trackType";
+import bcrypt from "bcrypt";
 
 dotenv.config();
 
@@ -53,7 +54,7 @@ export async function getSongByIdFromDB(id: string) {
 export async function createPlayList(name: string) {
   const db = getDB();
   const newPlaylist = {
-    id: Date.now.toString(),
+    id: Date.now().toString(),
     name,
     tracks: [],
   };
@@ -92,5 +93,58 @@ async function saveSongs(songs: any[]) {
   const result = await collection.bulkWrite(operations);
 
   console.log("Saved:", result.upsertedCount);
+}
+
+//User collection
+export function getUsersCollection() {
+  const db = getDB();
+  return db.collection("users");
+}
+export async function createDefaultUsers() {
+  const usersCollection = getUsersCollection();
+
+  const admin = await usersCollection.findOne({ username: "admin" });
+  const user = await usersCollection.findOne({ username: "user" });
+
+  if (!admin) {
+    await usersCollection.insertOne({
+      username: "admin",
+      password: await bcrypt.hash("admin", 10),
+      role: "ADMIN",
+    });
+    console.log("Default ADMIN created");
+  }
+
+  if (!user) {
+    await usersCollection.insertOne({
+      username: "user",
+      password: await bcrypt.hash("user", 10),
+      role: "USER",
+    });
+    console.log("Default USER created");
+  }
+}
+export async function createUsers(
+  username: string,
+  password: string,
+  role: string = "USER",
+) {
+  const usersCollection = getUsersCollection();
+
+  const existing = await usersCollection.findOne({ username });
+
+  if (existing) {
+    throw new Error("User already exists");
+  }
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  await usersCollection.insertOne({
+    username,
+    password: hashedPassword,
+    role,
+  });
+
+  console.log("USER created");
 }
 export {};
