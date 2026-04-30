@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/output.css" />
+    <link rel="stylesheet" href="/css/general.css" />
+    <title>Create Playlist</title>
+  </head>
+  <body class="app-container">
+    <%- include("partials/header")%>
+
+    <main class="max-w-3xl mx-auto py-20 px-6">
+      <h1 class="text-4xl font-semibold mb-10">Nieuwe playlist maken</h1>
+
+      <form action="/createplaylist" method="POST" class="space-y-6">
+        <input
+          type="text"
+          name="playlistName"
+          placeholder="Playlist naam"
+          required
+          class="w-full border rounded-lg px-4 py-4"
+        />
+
+        <textarea
+          name="description"
+          placeholder="Beschrijving"
+          class="w-full border rounded-lg px-4 py-4 h-40"
+        ></textarea>
+
+        <button type="submit" class="bg-black text-white px-8 py-4 rounded-lg">
+          Playlist opslaan
+        </button>
+      </form>
+    </main>
+
+    <%- include("partials/footer")%>
+  </body>
+</html>

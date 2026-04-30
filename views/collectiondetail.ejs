@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/output.css" />
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/detail.css" />
+    <title>Collection Detail</title>
+  </head>
+
+  <body class="app-container">
+    <%- include("partials/header")%>
+
+    <main class="container">
+      <div class="detail-container">
+
+        <!-- bovenste album section -->
+        <div
+          class="music-logo-container flex flex-col md:flex-row h-auto md:h-[250px]"
+        >
+          <aside class="image-container">
+            <img
+              src="<%= track.album?.images?.[0]?.url || '/assets/chillvibes.jpg' %>"
+              alt="album image"
+              class="w-[100%] h-auto md:w-[300px] md:h-[250px]"
+            />
+          </aside>
+
+          <div class="text-container text p-5 flex flex-col justify-center bg-white">
+            <p class="text-4xl font-semibold intro">
+              <%= track.album?.name || 'Album' %>
+            </p>
+
+            <p class="text-xl intro pt-2">
+              <%= track.artists?.[0]?.name || 'Unknown Artist' %>
+            </p>
+
+            <p class="pt-5 text-lg">
+              Jouw opgeslagen playlist collectie
+            </p>
+          </div>
+        </div>
+
+        <!-- zoek + sort -->
+        <div class="pt-10 px-5 flex flex-col md:flex-row gap-5 justify-between">
+
+          <input
+            type="text"
+            placeholder="Zoek nummers..."
+            class="border rounded-lg px-4 py-3 w-full md:w-[400px]"
+          />
+
+          <select
+            class="border rounded-lg px-4 py-3 w-full md:w-[250px]"
+          >
+            <option>Populair</option>
+            <option>A-Z</option>
+            <option>Nieuwste</option>
+            <option>Oudste</option>
+          </select>
+
+        </div>
+
+        <!-- nummers -->
+        <div class="recommended-section">
+
+          <div class="rec-header pb-5 pt-8">
+            <p class="font-semibold intro text-2xl">
+              Nummers in deze playlist
+            </p>
+          </div>
+
+          <div class="rec-container">
+            <% if (songs && songs.length > 0) { %>
+
+              <% songs.forEach((song) => { %>
+                <%- include("partials/songoverview", { song: song }) %>
+              <% }) %>
+
+            <% } else { %>
+
+              <p class="text-xl pt-5">
+                Geen nummers gevonden
+              </p>
+
+            <% } %>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <%- include("partials/footer")%>
+  </body>
+</html>

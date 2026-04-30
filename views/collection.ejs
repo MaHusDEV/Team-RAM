@@ -3,145 +3,166 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/output.css" />
     <link rel="stylesheet" href="/css/general.css" />
     <link rel="stylesheet" href="/css/collection.css" />
-    <link rel="stylesheet" href="/css/output.css" />
-    <title>Document</title>
+
+    <title>Bibliotheek</title>
   </head>
+
   <body class="app-container flex flex-col min-h-screen">
     <%- include("partials/header")%>
+
     <main class="flex-grow">
       <!-- titel -->
       <div class="logo flex flex-row justify-center items-center h-[250px]">
         <p class="text-6xl font-semibold">Bibliotheek</p>
       </div>
 
-      <!-- container -->
-       <div class="">
+      <!-- zoek + sort -->
+      <div class="px-5 pb-8 flex flex-col md:flex-row gap-5 justify-between">
+        <form
+          action="/collection"
+          method="GET"
+          class="flex flex-col md:flex-row gap-4 w-full"
+        >
+          <input
+            type="text"
+            name="q"
+            value="<%= query || '' %>"
+            placeholder="Zoek playlists..."
+            class="border rounded-lg px-4 py-3 w-full md:w-[400px]"
+          />
+
+          <select
+            name="sort"
+            class="border rounded-lg px-4 py-3 w-full md:w-[250px]"
+          >
+            <option value="">Sorteer</option>
+            <option value="az" <%= sort === "az" ? "selected" : "" %>>
+              A-Z
+            </option>
+            <option value="za" <%= sort === "za" ? "selected" : "" %>>
+              Z-A
+            </option>
+          </select>
+
+          <button
+            type="submit"
+            class="px-6 py-3 rounded-lg border"
+          >
+            Zoeken
+          </button>
+        </form>
+      </div>
+
+      <!-- playlists -->
+      <div>
         <div class="album-con">
 
+          <!-- plus kaart -->
+          <div
+            onclick="openModal()"
+            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition cursor-pointer flex items-center justify-center h-[230px]"
+          >
+            <p class="text-6xl font-light">+</p>
+          </div>
+
+          <!-- bestaande playlists -->
           <% if (songs && songs.length > 0) { %>
-            <% songs.slice(0, 12).forEach((song) => { %>
+            <% songs.slice(0, 4).forEach((song) => { %>
 
-              <div
-                class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
-              >
-                <img
-                  src="<%= song.album?.images?.[0]?.url || '/assets/chillvibes.jpg' %>"
-                  class="w-full h-36 object-cover"
-                  alt="album cover"
-                />
+              <a href="/collectiondetail/<%= song.id %>">
+                <div
+                  class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+                >
+                  <img
+                    src="<%= song.album?.images?.[0]?.url || '/assets/chillvibes.jpg' %>"
+                    class="w-full h-36 object-cover"
+                    alt="album cover"
+                  />
 
-                <div class="p-4">
-                  <h2 class="font-semibold text-2xl">
-                    <%= song.album?.name || 'Album' %>
-                  </h2>
+                  <div class="p-4">
+                    <h2 class="font-semibold text-2xl truncate">
+                      <%= song.album?.name || "Album" %>
+                    </h2>
 
-                  <p class="text-sm text-2xl">
-                    <%= song.artists?.[0]?.name || 'Unknown Artist' %>
-                  </p>
+                    <p class="text-sm text-2xl truncate">
+                      <%= song.artists?.[0]?.name || "Unknown Artist" %>
+                    </p>
+                  </div>
                 </div>
-              </div>
+                
+              </a>
 
             <% }) %>
           <% } else { %>
 
-            <p>Geen albums gevonden</p>
+            <p>Geen playlists gevonden</p>
 
           <% } %>
 
         </div>
       </div>
-      <!-- <div class="">
-        <div class="album-con">
-          <div
-            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
-          >
-            <img
-              src="/assets/chillvibes.jpg"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-4">
-              <h2 class="font-semibold text-2xl">Late Night</h2>
-              <p class="text-sm text-2xl">Night vibes</p>
-            </div>
-          </div>
-          <div
-            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
-          >
-            <img
-              src="/assets/chillvibes.jpg"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-4">
-              <h2 class="font-semibold text-2xl">Late Night</h2>
-              <p class="text-sm text-2xl">Night vibes</p>
-            </div>
-          </div>
-          <div
-            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
-          >
-            <img
-              src="/assets/chillvibes.jpg"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-4">
-              <h2 class="font-semibold text-2xl">Late Night</h2>
-              <p class="text-sm text-2xl">Night vibes</p>
-            </div>
-          </div>
-          <div
-            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
-          >
-            <img
-              src="/assets/chillvibes.jpg"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-4">
-              <h2 class="font-semibold text-2xl">Late Night</h2>
-              <p class="text-sm text-2xl">Night vibes</p>
-            </div>
-          </div>
-          <div
-            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
-          >
-            <img
-              src="/assets/chillvibes.jpg"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-4">
-              <h2 class="font-semibold text-2xl">Late Night</h2>
-              <p class="text-sm text-2xl">Night vibes</p>
-            </div>
-          </div>
-          <div
-            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
-          >
-            <img
-              src="/assets/chillvibes.jpg"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-4">
-              <h2 class="font-semibold text-2xl">Late Night</h2>
-              <p class="text-sm text-2xl">Night vibes</p>
-            </div>
-          </div>
-          <div
-            class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
-          >
-            <img
-              src="/assets/chillvibes.jpg"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-4">
-              <h2 class="font-semibold text-2xl">Late Night</h2>
-              <p class="text-sm text-2xl">Night vibes</p>
-            </div>
-          </div>
-        </div> 
-      </div> -->
     </main>
 
+    <!-- popup modal -->
+    <div
+      id="playlistModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+    >
+      <div class="bg-white p-8 rounded-xl w-[400px] shadow-xl">
+
+        <h2 class="text-2xl font-semibold mb-6">
+          Nieuwe playlist maken
+        </h2>
+
+        <form action="/create-playlist" method="POST">
+
+          <input
+            type="text"
+            name="playlistName"
+            placeholder="Playlist naam"
+            required
+            class="border w-full p-3 rounded-lg mb-4"
+          />
+
+          <div class="flex gap-3 justify-end">
+
+            <button
+              type="button"
+              onclick="closeModal()"
+              class="px-5 py-3 rounded-lg border"
+            >
+              Annuleren
+            </button>
+
+            <button
+              type="submit"
+              class="px-5 py-3 rounded-lg border"
+            >
+              Opslaan
+            </button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+
     <%- include("partials/footer")%>
+
+    <script>
+      function openModal() {
+        document
+          .getElementById("playlistModal")
+          .classList.remove("hidden");
+      }
+
+      function closeModal() {
+        document
+          .getElementById("playlistModal")
+          .classList.add("hidden");
+      }
+    </script>
   </body>
 </html>

@@ -14,9 +14,6 @@
   padding: 40px 0;
   text-align: center;
 }
-.header-container {
-  background-color: var(--music-cont-color);
-}
 
 .mood-title h1 {
   margin: 0;
@@ -57,7 +54,7 @@
 .circle {
   width: 70px;
   height: 70px;
-  background-color: var(--music-cont-color);
+  background-color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;

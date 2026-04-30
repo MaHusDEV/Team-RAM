@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/output.css" />
-    <link rel="stylesheet" href="/css/general.css" />
     <link rel="stylesheet" href="/css/moodpage.css" />
+    <link rel="stylesheet" href="/css/general.css" />
+    
 
     <title>Document</title>
   </head>
@@ -16,6 +17,10 @@
       <div class="logo flex flex-row justify-center items-center h-[250px]">
         <section class="mood-title font-semibold">
           <p class="text-6xl font-semibold pb-5">Kies je mood</p>
+
+          <!-- <div class="logo flex flex-row justify-center items-center h-[250px]">
+            <p class="text-6xl font-semibold">Kies je mood</p>
+          </div> -->
 
           <div class="moods">
             <div class="mood">
@@ -153,7 +158,7 @@
           </h2>
 
           <div class="">
-            <div class="album-con">
+            <!-- <div class="album-con">
               <div
                 class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
               >
@@ -226,7 +231,39 @@
                   <p class="text-sm text-2xl">Night vibes</p>
                 </div>
               </div>
-            </div>
+            </div> -->
+
+<div class="album-con">
+  <% if (songs && songs.length) { %>
+
+    <% songs.forEach(song => { %>
+      <div class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+        
+        <img 
+          src="<%= song.album?.images?.[0]?.url || '/assets/chillvibes.jpg' %>" 
+          class="w-full h-36 object-cover"
+        />
+
+        <div class="p-4">
+          <h2 class="font-semibold text-2xl">
+            <%= song.name %>
+          </h2>
+
+          <p class="text-sm text-gray-500">
+            <%= song.artists?.[0]?.name %>
+          </p>
+        </div>
+
+      </div>
+    <% }) %>
+
+  <% } else { %>
+
+    <p>Geen songs gevonden</p>
+
+  <% } %>
+</div>
+
           </div>
         </div>
       </section>
