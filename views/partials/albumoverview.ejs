@@ -1,0 +1,27 @@
+﻿<div class="album-con responsive-album-con">
+    <% if (albums && albums.length > 0) { %>
+        <% albums.forEach((album) => { %>
+            <div
+                class="album-card rec-music-gradient rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+            >
+                <img
+                    src="<%= album.coverImage || '/assets/chillvibes.jpg' %>"
+                    class="w-full h-[160px] object-cover album-card-img"
+                    alt="album cover"
+                />
+                <div class="p-4">
+                    <h2 class="font-semibold text-2xl">
+                        <a href="/albums/<%= album._id %>">
+                            <%= album.name || 'Album' %>
+                        </a>
+                    </h2>
+                    <p class="text-sm text-2xl">
+                        <%= album.tracks?.length || 0 %> tracks
+                    </p>
+                </div>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <p>Geen albums gevonden</p>
+    <% } %>
+</div>

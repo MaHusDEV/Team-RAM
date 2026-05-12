@@ -13,20 +13,6 @@
   min-width: 150px;
 }
 
-.gradient-start {
-  background: linear-gradient(
-    135deg,
-    var(--color-header),
-    var(--color-header-end)
-  );
-}
-.gradient-end {
-  background: linear-gradient(
-    135deg,
-    var(--color-header),
-    var(--color-header-end)
-  );
-}
 .trend-con {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

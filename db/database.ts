@@ -1,4 +1,4 @@
-import { MongoClient, Db } from "mongodb";
+import { MongoClient, Db, ObjectId } from "mongodb";
 import dotenv from "dotenv";
 import { Track } from "../types/trackType";
 import bcrypt from "bcrypt";
@@ -9,7 +9,7 @@ const uri = process.env.MONGO_URI!;
 const client = new MongoClient(uri);
 
 let db: Db;
-
+//Database
 export async function connectDB() {
   try {
     await client.connect();
@@ -20,7 +20,6 @@ export async function connectDB() {
     process.exit(1);
   }
 }
-
 export function getDB() {
   if (!db) {
     throw new Error("DB not initialized");
@@ -51,6 +50,8 @@ export async function getSongByIdFromDB(id: string) {
     artist,
   };
 }
+
+//Playlist
 export async function createPlayList(name: string) {
   const db = getDB();
   const newPlaylist = {
@@ -61,10 +62,27 @@ export async function createPlayList(name: string) {
   await db.collection("playlists").insertOne(newPlaylist);
   return newPlaylist;
 }
-export async function getPlaylists() {
+export async function getAlbumsFromDB() {
   const db = getDB();
+  const albums = await db.collection("albums").find().toArray();
+  const albumsWithImages = await Promise.all(
+      albums.map(async (album: any) => {
+        const firstTrackId = album.tracks?.[0];
+        let coverImage = "/assets/chillvibes.jpg";
 
-  return await db.collection("playlists").find().toArray();
+        if (firstTrackId) {
+          const track = await db.collection("tracks").findOne({
+            _id: new ObjectId(firstTrackId),
+          });
+          coverImage = track?.album?.images?.[0]?.url || coverImage;
+        }
+        return {
+          ...album,
+          coverImage,
+        };
+      }),
+  );
+  return albumsWithImages;
 }
 export async function addSongToPlaylist(playlistId: string, trackId: string) {
   const db = getDB();
@@ -94,7 +112,56 @@ async function saveSongs(songs: any[]) {
 
   console.log("Saved:", result.upsertedCount);
 }
-
+export async function createRandomAlbum(name: string) {
+  const db = getDB();
+  const randomTracks = await db
+      .collection("tracks")
+      .aggregate([{ $sample: { size: 15 } }])
+      .toArray();
+  if (randomTracks.length === 0) {
+    console.log("No tracks found");
+    return null;
+  }
+  const trackIds = randomTracks.map((track: any) => track._id);
+  const coverImage =
+      randomTracks[0]?.album?.images?.[0]?.url || "/assets/chillvibes.jpg";
+  const album = {
+    name,
+    tracks: trackIds,
+    coverImage,
+    createdAt: new Date(),
+  };
+  await db.collection("albums").insertOne(album);
+  console.log(`Album "${name}" created with ${trackIds.length} tracks`);
+  return album;
+}
+export async function getAlbumByIdFromDB(id: string) {
+  const db = getDB();
+  
+  const album = await db.collection("albums").findOne({
+    _id: new ObjectId(id),
+  });
+  
+  if (!album) return null;
+  const songs = await db
+      .collection("tracks")
+      .find({
+        _id: { $in: album.tracks },
+      })
+      .toArray();
+  
+  const coverImage =
+      album.coverImage ||
+      songs[0]?.album?.images?.[0]?.url ||
+      "/assets/chillvibes.jpg";
+  return {
+    album: {
+      ...album,
+      coverImage,
+    },
+    songs,
+  };
+}
 //User collection
 export function getUsersCollection() {
   const db = getDB();

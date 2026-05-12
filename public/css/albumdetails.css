@@ -1,0 +1,143 @@
+﻿.album-header-cont {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.album-header-cont img {
+    width: 300px;
+    height: 250px;
+    min-width: 300px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 12px;
+}
+.album-header-text {
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    height: 220px;
+}
+.album-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+.tracks-count{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 10px;
+    background: linear-gradient(135deg, #0d5891, #17c3f7);
+}
+
+.album-details-cont {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.song-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    transition: 0.2s;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.song-row:hover {
+    background: rgba(255,255,255,0.08);
+}
+.song-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+}
+.song-index {
+    width: 20px;
+    font-size: 16px;
+    opacity: 0.7;
+}
+.song-cover {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.song-info {
+    min-width: 0;
+}
+.song-title {
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.song-artist {
+    font-size: 14px;
+    opacity: 0.7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.truncate-song {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 100px;
+    max-width: 600px;
+}
+@media (max-width: 630px) {
+    .album-header-cont {
+        flex-direction: column;
+        min-height: 695px;
+    }
+    .album-header-cont img {
+        width: 100%;
+        height: 400px;
+        min-width: 0;
+        object-fit: cover;
+        object-position: center;
+
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        flex-shrink: 0;
+    }
+    .album-header-text {
+         width: 100%;
+         height: 275px;
+         display: flex;
+     }
+    .album-bottom-row {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .tracks-count {
+        width: 84px;
+        height: 84px;
+        padding: 0;
+        flex-shrink: 0;
+    }
+    .truncate-song {
+        min-width: 70px;
+        max-width: 280px;
+    }
+}

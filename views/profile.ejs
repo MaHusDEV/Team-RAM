@@ -16,7 +16,9 @@
           <div class="profile-background-photo"></div>
           <div class="place-content-center">
             <img
-              src="/assets/Palindrom_profile.jpg"
+              src="<%= typeof avatar !== 'undefined' && avatar
+                      ? '/uploads/' + avatar
+                      : '/assets/Palindrom_profile.jpg' %>"
               alt="profile photo"
               class="profile-img"
             />
@@ -25,37 +27,31 @@
             </div>
           </div>
 
-          <button class="edit-button">
+          <button  class="edit-button" id="editBtn">
             <img src="/assets/edit-profile.png" alt="edit" class="edit-icon" />
           </button>
+
+          <form class="form-avatar main-gradient-container" id="editForm" action="/profile" method="POST" enctype="multipart/form-data" style="display: none;">
+            <label class="upload-avatar-l flex">Upload new avatar:</label>
+            <input class="upload-avatar flex" type="file" name="avatar" accept="image/*" required />
+
+            <button class="btn h-[30px]" type="submit">Save</button>
+          </form>
+          <script>
+            document.getElementById("editBtn").addEventListener("click", () => {
+              const form = document.getElementById("editForm");
+              form.style.display = form.style.display === "none" ? "block" : "none";
+            });
+          </script>
+
         </div>
       </div>
 
-      <p class="pl-5 pt-5 text-2xl font-semibold">Eigen afspeellijsten</p>
-      <div class="album-con">
-        <div
-          class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
-        >
-          <img src="/assets/chillvibes.jpg" class="w-full h-36 object-cover" />
-          <div class="p-4">
-            <h2 class="font-semibold text-2xl">Late Night</h2>
-            <p class="text-sm text-gray-600 text-xl">Night vibes</p>
-          </div>
-        </div>
-      </div>
+      <p class="pt-5 text-2xl font-semibold">Eigen afspeellijsten</p>
+      <%- include("partials/albumoverview")%>
 
-      <p class="pl-5 text-2xl font-semibold">Afspeellijsten die je leuk vond</p>
-      <div class="album-con">
-        <div
-          class="w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
-        >
-          <img src="/assets/chillvibes.jpg" class="w-full h-36 object-cover" />
-          <div class="p-4">
-            <h2 class="font-semibold text-2xl">Late Night</h2>
-            <p class="text-sm text-gray-600 text-xl">Night vibes</p>
-          </div>
-        </div>
-      </div>
+      <p class="pt-5 text-2xl font-semibold">Afspeellijsten die je leuk vond</p>
+      <%- include("partials/albumoverview")%>
     </main>
 
     <%- include("partials/footer")%>

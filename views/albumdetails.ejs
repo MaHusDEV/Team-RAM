@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/output.css" />
+        <link rel="stylesheet" href="/css/general.css" />
+        <link rel="stylesheet" href="/css/albumdetails.css" />
+        <title><%= album.name %></title>
+    </head>
+
+    <body class="app-container">
+        <%- include("partials/header") %>
+        
+        <main class="main-container flex flex-col">
+            <div class="album-header-cont" id="headerGradient">
+                <img src="<%= album.coverImage || '/assets/chillvibes.jpg' %>" alt="album cover" id="albumImage" crossorigin="anonymous"
+                />
+                <div class="album-header-text p-5">
+                    <div class="album-bottom-row ">
+                        <h1 class="text-5xl font-semibold text-color">
+                            <%= album.name %>
+                        </h1>
+
+                        <p class="text-2xl tracks-count text-color">
+                            <%= album.tracks?.length || 0 %>
+                            <span>tracks</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="album-details-cont">
+                <% if (songs && songs.length > 0) { %>
+                    <% songs.forEach((song, index) => { %>
+                        <a
+                            href="/details/<%= song.id %>"
+                            class="song-row"
+                        >
+                            <div class="song-left">
+                                <p class="song-index">
+                                    <%= index + 1 %>
+                                </p>
+                                <img
+                                    src="<%= song.album?.images?.[0]?.url || '/assets/chillvibes.jpg' %>"
+                                    alt="track cover"
+                                    class="song-cover"
+                                />
+                                <div class="song-info">
+                                    <p class="song-title truncate-song">
+                                        <%= song.name %>
+                                    </p>
+
+                                    <p class="song-artist">
+                                        <%= song.artists?.[0]?.name || "Unknown Artist" %>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    <% }) %>
+                <% } else { %>
+                    <p>Geen nummers gevonden</p>
+                <% } %>
+            </div>
+        </main>
+    
+        <%- include("partials/footer") %>
+
+        <script src="/js/gradient.js" defer></script>
+    </body>
+</html>

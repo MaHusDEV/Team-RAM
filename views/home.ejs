@@ -68,22 +68,8 @@
         </div>
       </div>
       <p class="text-2xl font-semibold intro pb-5 pt-5">Albums voor jou</p>
-      <div class="album-con">
-        
-        <div
-          class="rec-music-gradient w-56 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
-        >
-          <img
-            src="/assets/chillvibes.jpg"
-            class="w-full h-36 object-cover"
-            alt="album img"
-          />
-          <div class="p-4">
-            <h2 class="font-semibold text-2xl">Late Night</h2>
-            <p class="text-sm text-xl">Night vibes</p>
-          </div>
-        </div>
-      </div>  
+
+      <%- include("partials/albumoverview")%>
     </main>
     <%- include("partials/footer")%>
   </body>

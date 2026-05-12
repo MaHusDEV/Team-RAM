@@ -28,6 +28,7 @@
     "@types/express": "^5.0.6",
     "@types/express-session": "^1.19.0",
     "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.1.0",
     "@types/node": "^25.5.0",
     "nodemon": "^3.1.14",
     "postcss": "^8.5.6",
@@ -49,6 +50,7 @@
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.1.1",
     "mongoose": "^9.3.1",
+    "multer": "^2.1.1",
     "node": "^24.15.0",
     "node-fetch": "^3.3.2"
   },

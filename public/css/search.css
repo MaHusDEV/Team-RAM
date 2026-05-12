@@ -34,16 +34,11 @@
 
 .result-cont {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 100px);
   align-items: start;
   gap: 15px;
   padding: 20px;
-}
-@media (max-width: 1660px) {
-  .result-cont {
-    grid-template-columns: repeat(5, 1fr);
-  }
 }
 @media (max-width: 1384px) {
   .result-cont {

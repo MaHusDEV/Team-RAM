@@ -5,6 +5,8 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  border: 5px;
+  border-radius: 10px;
 }
 .profile-img {
   width: 190px;
@@ -43,6 +45,29 @@
   background-image: url("/assets/profile-background-photo.avif");
   width: 100%;
   height: 250px;
+}
+.form-avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 60px; 
+  right: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+.upload-avatar{
+  width: 200px;
+  height: 30px;
+
+  background-color: #ffffff;
+  box-shadow: 0 2 10px #e0e0e0;
+}
+.upload-avatar-l{
+  width: 200px;
+  height: 30px;
 }
 .info-container {
   display: flex;

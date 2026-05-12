@@ -176,7 +176,6 @@ input {
 }
 .text-container-song {
   display: flex;
-  align-items: flex-end;
   flex: 1;
   gap: 5px;
   align-items: center;
@@ -198,6 +197,13 @@ input {
   text-overflow: ellipsis;
   min-width: 100px;
   max-width: 200px;
+}
+.truncate-song-header {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 50px;
+  max-width: 450px;
 }
 .truncate-artist {
   white-space: nowrap;
@@ -239,6 +245,12 @@ input {
 }
 .intro {
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+}
+.text-color {
+  color: rgb(128 151 133) !important;
+
+  text-shadow:
+          1px 1px 100px rgb(0 0 0);
 }
 @media (min-width: 1960px) {
   .footer-container {
@@ -297,6 +309,21 @@ input {
 }
 @media (max-width: 630px) {
   main {
-    width: 400px;
+    width: 100%;
+  }
+  .responsive-album-con {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+  }
+
+  .responsive-album-con .album-card {
+    width: 100%;
+    height: 400px;
+  }
+
+  .responsive-album-con .album-card-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
   }
 }
