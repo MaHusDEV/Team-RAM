@@ -15,8 +15,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss ...",
-    "start": "node server.js",
+    "dev": "tailwindcss -i ./public/css/main.css -o ./public/css/output.css --watch",
+    "start": "nodemon server.ts",
     "docker": "concurrently \"npm run dev\" \"npm start\""
   },
   "devDependencies": {
