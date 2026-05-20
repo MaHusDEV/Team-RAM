@@ -15,8 +15,9 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -i ./public/css/main.css -o ./public/css/output.css --watch",
-    "start": "nodemon server.ts"
+    "dev": "tailwindcss ...",
+    "start": "node server.js",
+    "docker": "concurrently \"npm run dev\" \"npm start\""
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.1",
@@ -38,6 +39,7 @@
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "concurrently": "^9.2.1",
     "connect-mongodb-session": "^5.0.0",
     "cookie-parser": "^1.4.7",
     "cookie-session": "^2.1.1",
