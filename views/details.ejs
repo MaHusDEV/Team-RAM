@@ -38,22 +38,20 @@
             <!--Artist Name -->
             <div class="logo-like-space">
               <div class="text-color">
-                <p class="text-3xl font-semibold intro text-color "><%= track.name %></p>
-                <p class="text-xl introv text-color"><%= track.artists[0]?.name %></p>
+                <p class="text-3xl font-semibold  text-color "><%= track.name %></p>
+                <p class="text-2xl  text-color"><%= track.artists[0]?.name %></p>
               </div>
               
             </div>
           </div>
           
           <div class="discription-container md:w-[350px] w-full">
-            <div class="artist-description p-5 text-color">
-              <p>
-                <em>
-                  <strong class="text-color"><%= artist?.name || track.artists[0]?.name %></strong>
-                  is an artist featured on the track
-                  <strong class="text-color"><%= track.name %></strong>.
-                </em>
-              </p>
+            <div class="artist-description p-5 ">
+              <h1 class="text-color text-2xl">
+                <%= artist?.name || track.artists[0]?.name %>
+                is an artist featured on the track
+                <%= track.name %>.
+              </h1>
             </div>
             <div class="flex flex-row gap-[10px]  menu" data-id="<%= track.id %>">
               <button id="addBtb">

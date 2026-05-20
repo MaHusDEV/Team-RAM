@@ -21,6 +21,10 @@
     align-items: flex-end;
     flex: 1;
     height: 220px;
+    padding: 20px 0 0px 20px;
+}
+.album-header-text h1 {
+    margin-bottom: 20px;
 }
 .album-bottom-row {
     display: flex;
@@ -30,12 +34,13 @@
 }
 .tracks-count{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    padding: 10px;
+    height: 30px;
     background: linear-gradient(135deg, #0d5891, #17c3f7);
+    border-top-left-radius: 10px;
+    padding: 2px;
 }
 
 .album-details-cont {
@@ -131,8 +136,6 @@
         align-items: flex-end;
     }
     .tracks-count {
-        width: 84px;
-        height: 84px;
         padding: 0;
         flex-shrink: 0;
     }

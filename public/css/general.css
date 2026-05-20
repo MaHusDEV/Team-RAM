@@ -243,14 +243,12 @@ input {
 .genre-scroll::-webkit-scrollbar-thumb:hover {
   background: #ffffff80;
 }
-.intro {
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
-}
 .text-color {
-  color: rgb(128 151 133) !important;
+  color: rgb(255 255 255) !important;
 
+  -webkit-text-stroke: 1px rgb(155 226 255);
   text-shadow:
-          1px 1px 100px rgb(0 0 0);
+          1px 2px 60px rgb(175 255 255);
 }
 @media (min-width: 1960px) {
   .footer-container {
