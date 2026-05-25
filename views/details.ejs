@@ -48,9 +48,9 @@
           <div class="discription-container md:w-[350px] w-full">
             <div class="artist-description p-5 ">
               <h1 class="text-color text-2xl">
-                <%= artist?.name || track.artists[0]?.name %>
-                is an artist featured on the track
-                <%= track.name %>.
+                '<%= artist?.name || track.artists[0]?.name %>'
+                is een artiest die voorkomt op het nummer
+                '<%= track.name %>.'
               </h1>
             </div>
             <div class="flex flex-row gap-[10px]  menu" data-id="<%= track.id %>">
